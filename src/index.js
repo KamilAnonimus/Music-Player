@@ -1,7 +1,10 @@
 import React from 'react';
+import './app.scss';
 import ReactDOM from 'react-dom/client';
 import Header from './header';
 import RightControlPanel from './controlPanel';
+import SliderUp from './sliderUp';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,9 +14,7 @@ root.render(
       <div className='homepage'>
         <RightControlPanel/>
         <div className='homepageUp'>
-          <div className='sliderUp'>
-
-          </div>
+          <SliderUp/>
           <div className='CenterButtons'>
             <div className='button all'>All</div>
             <div className='button'>Trending</div>
@@ -45,3 +46,15 @@ root.render(
     </div>
   </React.StrictMode>
 );
+
+const massTracks = []
+massTracks[0] = {
+  name: "Kizara",
+}
+massTracks[1] = {
+  name: "Morgenshtern"
+}
+massTracks[2] = {
+  name: "Miyagi & Andy Panda"
+}
+console.log(massTracks)

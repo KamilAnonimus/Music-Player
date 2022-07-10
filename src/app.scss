@@ -129,19 +129,51 @@ body {
                 }
             }
             .homepageUp {
-                .sliderUp {
-                    width: 887px;
-                    height: 223px;
+                .slider {
+                    max-height: 282px;
+                    overflow:visible;
+                    max-width: 887px;
+                }
+                .slider ul {
+                    margin: 0;
+                    padding: 0;
+                }
+                .slider ul li img {
+                    width: 100%;
+                    height: auto;
+                    max-height: 282px;
+                }
+                .slider .bx-wrapper{
+                    position: relative;
+                    margin: 0 auto;
+                    max-height: 282px;
+                }
+                .bx-viewport {
+                    z-index: 1;
+                    max-height: 282px;
+                }
+                .slider .bx-controls{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+                .slider .bx-prev { 
+                    display: none; 
+                }
+                .slider .bx-next {   
+                    display: none; 
                 }
                 .CenterButtons {
+                    margin-top:20px;
                     font-size: 20px;
                     display: flex;
-                    width: 871px;
+                    width: 887px;
                     position: relative;
                     justify-content: space-between;
                     height: 71px;
                     align-items: center;
-                    left: 29px;
                     background: #0F1E36;
                     box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.2);
                     .button {
