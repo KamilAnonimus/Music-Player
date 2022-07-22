@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import Header from './header';
 import RightControlPanel from './controlPanel';
 import SliderUp from './sliderUp';
+import SliderDown from './smallBottomSlider';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,9 +24,7 @@ root.render(
             <div className='button'>Genres</div>
             <div className='button'>Most Played</div>
           </div>
-          <div className='sliderDown'>
-
-          </div>
+            <SliderDown/>
         </div>
         <div className='homepageDown'>
           <div className='ControlMusicPanel'>

@@ -6,8 +6,11 @@ body {
         max-block-size: 10%;
         font-family:'Source Sans Pro', sans-serif;
         color: #76CCFB;
+        -moz-user-select: none; 
+        -webkit-user-select: none; 
+        -ms-user-select: none; 
+        user-select: none;
         .button {font-size: 20px;}
-        .button:hover {color: #FFFFFF;}
         .header {
             display: flex;
             align-items: center;
@@ -129,41 +132,41 @@ body {
                 }
             }
             .homepageUp {
-                .slider {
-                    max-height: 282px;
-                    overflow:visible;
-                    max-width: 887px;
-                }
-                .slider ul {
-                    margin: 0;
-                    padding: 0;
-                }
-                .slider ul li img {
-                    width: 100%;
-                    height: auto;
-                    max-height: 282px;
-                }
-                .slider .bx-wrapper{
-                    position: relative;
-                    margin: 0 auto;
-                    max-height: 282px;
-                }
-                .bx-viewport {
+                %SliderViewport {
                     z-index: 1;
                     max-height: 282px;
+                    width: 100%;
+                    overflow: hidden;
+                    position: relative;
+                    height: 271.406px;;
                 }
-                .slider .bx-controls{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
+                %SliderUl {
+                    margin: 0;
+                    padding: 0;
+                    width: 3215%;
+                    transition-duration: 0.5s;
+                    display: flex;
+                    align-items: center;
+                    pointer-events: none;
                 }
-                .slider .bx-prev { 
-                    display: none; 
-                }
-                .slider .bx-next {   
-                    display: none; 
+                .sliderUp {
+                    max-height: 282px;
+                    overflow: visible;
+                    max-width: 887px;
+                    .wrapper {
+                        .viewport {
+                            @extend %SliderViewport;
+                            ul {@extend %SliderUl;}
+                            ul li img {width: 100%;}                        
+                        }
+                        .ButtonControls {
+                            display: flex;
+                            justify-content: space-between;
+                            position: relative;
+                            bottom: 171px;
+                            .button {z-index: 99;}
+                        }
+                    }
                 }
                 .CenterButtons {
                     margin-top:20px;
@@ -188,8 +191,30 @@ body {
                     .all {color: #FFFFFF;}
                 }
                 .sliderDown {
-                    width: 904px;
-                    height: 134.44px;
+                    width: 886px;
+                    max-height: 134.44px;
+                    margin-top: 28.56px;
+                    .wrapper {
+                        max-height: 134.44px;
+                        .viewport {
+                            max-height: 134.44px;
+                            @extend %SliderViewport;
+                            ul {@extend %SliderUl;}
+                            ul li img {
+                                width: 108px;
+                                height: 97px;
+                                max-height: 134.44px;
+                            }
+                            li {
+                                width: 108px;
+                            }
+                        }
+                    }
+                }
+                li {
+                        list-style: none;
+                        width: 267.664px;
+                        margin-right: 42px;
                 }
             }
             .homepageDown {
