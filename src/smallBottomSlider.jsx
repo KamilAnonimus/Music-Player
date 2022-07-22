@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './app.scss';
+import './style/homepage.scss';
 import png1DownSlider from './Music albums/Bandana/kizaru - 5 Nights Crazy/maxresdefault.jpg';
 import png2DownSlider from './Music albums/Bandana/Big Baby Tape kizaru - 99 Problems/Big Baby Tape kizaru - 99 Problems.jpeg';
 import png3DownSlider from './Music albums/Million Dollar: Business/MORGENSHTERN - Aristocrat/maxresdefault.jpg';

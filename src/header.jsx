@@ -1,5 +1,5 @@
 import React from "react";
-import './app.scss';
+import './style/homepage.scss';
 import icon from './images/icon.png';
 import logo from './images/logo.png';
 import timehistory from './images/time-history.png';
