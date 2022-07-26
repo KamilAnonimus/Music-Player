@@ -33,7 +33,6 @@ class sliderDown extends Component {
     render () {
         const style = { transform: this.state.style };
         return (
-        <div className='sliderDown'>
             <div className="wrapper">
                 <div className="viewport" onClick={ e => this.SwipePositionTrack()} onMouseDown={ e => mousedown = window.event.clientX}>
                     <ul style={ style }>
@@ -50,7 +49,6 @@ class sliderDown extends Component {
                     </ul>
                 </div>
             </div>
-        </div>
         );
     }
 }

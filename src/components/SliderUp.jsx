@@ -5,6 +5,7 @@ import png2UpSlider from './Music albums/Million Dollar: Business/mqdefault.jpg'
 import png3UpSlider from './Music albums/MiyaGi & Andy Panda/miyagi-andy-panda-yamakasi.jpg';
 import buttonLeftSliderUp from './images/chevron-left.png';
 import buttonRightSliderUp from './images/chevron-right.png';
+import { Outlet, Link } from 'react-router-dom';
 
 var positionXSliderUpTrack = 0;
 var mouseup = 0;
@@ -41,9 +42,9 @@ class sliderUp extends Component {
             <div className="wrapper">
                 <div className="viewport" onClick={ e => this.SwipePositionTrack()} onMouseDown={ e => mousedown = window.event.clientX}>
                     <ul style={ style }>
-                        <li><a href="#"><img src={png1UpSlider}/></a></li>
-                        <li><a href="#"><img src={png2UpSlider}/></a></li>
-                        <li><a href="#"><img src={png3UpSlider}/></a></li>
+                        <li><Link className="linkSliderUp" to={"/albumsPage"}><img src={png1UpSlider}/></Link></li>
+                        <li><Link className="linkSliderUp" to={"/albumsPage"}><img src={png2UpSlider}/></Link></li>
+                        <li><Link className="linkSliderUp" to={"/albumsPage"}><img src={png3UpSlider}/></Link></li>
                     </ul>
                 </div>
                 <div className="ButtonControls">

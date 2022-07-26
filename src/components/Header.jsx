@@ -8,7 +8,7 @@ import star from './images/star.png';
 import list from './images/player-list-play.png';
 import searchicon from './images/search.png';
 
-function header() {
+function Header() {
   return (
     <div className="header">
       <div className="Sign">
@@ -30,4 +30,4 @@ function header() {
   );
 }
 
-export default header;
+export default Header;

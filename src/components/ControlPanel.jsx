@@ -1,7 +1,7 @@
 import React from "react";
 import './style/homepage.scss';
 
-function panel() {
+function Panel() {
     return (
         <div className="buttonsRightPanel">
             <div className="button home">Home</div>
@@ -23,4 +23,4 @@ function panel() {
     );
 }
 
-export default panel;
+export default Panel;

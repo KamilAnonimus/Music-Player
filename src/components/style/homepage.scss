@@ -1,6 +1,6 @@
 body {
     background-color: #0F1E36;
-    .container {
+        .container {
         width: 1152px;
         margin: 0 auto;
         max-block-size: 10%;
@@ -69,7 +69,7 @@ body {
                 }
             }
             .buttonHeader {
-                img {
+                img, .img {
                     margin-right: 30px;
                     position: relative;
                     bottom: 37px;
@@ -147,17 +147,22 @@ body {
                     transition-duration: 0.5s;
                     display: flex;
                     align-items: center;
-                    pointer-events: none;
                 }
                 .sliderUp {
                     max-height: 282px;
                     overflow: visible;
                     max-width: 887px;
                     .wrapper {
+                        // height: 282px;
                         .viewport {
+                            display: flex;
                             @extend %SliderViewport;
                             ul {@extend %SliderUl;}
-                            ul li img {width: 100%;}                        
+                            ul li img {width: 100%;}
+                            img {pointer-events: none;}
+                            a {display: flex;
+                                height: 50px;
+                                align-items: center;}
                         }
                         .ButtonControls {
                             display: flex;
