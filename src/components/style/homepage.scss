@@ -1,7 +1,7 @@
 body {
     background-color: #0F1E36;
         .container {
-        width: 1152px;
+        max-width: 1152px;
         margin: 0 auto;
         max-block-size: 10%;
         font-family:'Source Sans Pro', sans-serif;
@@ -69,20 +69,17 @@ body {
                 }
             }
             .buttonHeader {
-                img, .img {
-                    margin-right: 30px;
-                    position: relative;
-                    bottom: 37px;
-                }
+                position: relative;
+                bottom: 37px;
+                img, .img {margin-right: 30px;}
             }
         }
         .homepage {
             display: flex;
             .buttonsRightPanel {
-            position: relative;
-            width: 248px;
-            bottom: 11px;
-            left: 16px;
+                position: relative;
+                width: 265px;
+                bottom: 11px;
                 .button {
                 display: flex;
                 flex-direction: column;
@@ -153,7 +150,6 @@ body {
                     overflow: visible;
                     max-width: 887px;
                     .wrapper {
-                        // height: 282px;
                         .viewport {
                             display: flex;
                             @extend %SliderViewport;

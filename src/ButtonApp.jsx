@@ -8,7 +8,7 @@ import MostPlayed from "./components/MostPlayed";
 import Homepage from "./Homepage";
 import AlbumsPage from "./AlbumsPage";
 
-export default function buttonApp() {
+export default function ButtonApp() {
     return (
           <Routes>
             <Route path="/" element={<Homepage />} >

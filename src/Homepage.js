@@ -2,9 +2,10 @@ import React from "react";
 import Header from './components/Header';
 import RightControlPanel from './components/ControlPanel';
 import SliderUp from './components/SliderUp';
+import ControllTrack from "./components/ControlTrack";
 import { Outlet, Link } from 'react-router-dom';
 
-function homepage() {
+function Homepage() {
     return (
       <>
         <div className='container'>
@@ -26,19 +27,7 @@ function homepage() {
               </div>
             </div>
             <div className='homepageDown'>
-              <div className='ControlMusicPanel'>
-                <div className='informationMusic'>
-                  <img className='avatar'></img>
-                  <div className='MusicName'>NameMusic</div>
-                  <div className='avtorNameMusic'>NameAvtor</div>
-                </div>
-                <div className='controlTrack'>
-                  <img></img>
-                  <img></img>
-                  <img></img>
-                  <img></img>
-                </div>
-              </div>
+              <ControllTrack/>
             </div>
           </div>
         </div>
@@ -47,4 +36,4 @@ function homepage() {
                
 }
 
-export default homepage;
+export default Homepage;

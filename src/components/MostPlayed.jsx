@@ -1,4 +1,4 @@
-export default function mostPlayed() {
+export default function MostPlayed() {
     return(
         <div className="mostPlayedDownSlider">
 

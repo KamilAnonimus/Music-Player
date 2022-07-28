@@ -1,4 +1,4 @@
-export default function newReleases() {
+export default function NewReleases() {
     return(
         <div className="newReleasesDownSlider">
 

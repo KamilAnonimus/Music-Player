@@ -1,4 +1,4 @@
-export default function genres() {
+export default function Genres() {
     return(
         <div className="genresDownSlider">
 

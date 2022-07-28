@@ -1,0 +1,165 @@
+.containerAlbumPage {
+    max-width: 1152px;
+    margin: 0 auto;
+    max-block-size: 10%;
+    font-family:'Source Sans Pro', sans-serif;
+    color: #76CCFB;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+    padding-top: 57px;
+    display: flex;
+    flex-direction: column;
+    .header {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        left: 49px;
+        max-width: 1031px;
+        width: 640px;
+        .imgAndName {
+            max-width: 347px;
+            height: 263px;
+            .img {
+                width: 347px;
+                height: 263px;
+                border-radius: 24px;
+            }
+            .nameOnImg {
+                height: 46px;
+                font-size: 40px;
+                position: relative;
+                bottom: 52px;
+                background-color: #0F1E36;
+                display: inline-block;
+                padding: 2px;
+                padding-top: 0px;
+            }
+        }
+        .informationAlbum {
+            font-size: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 263px;
+            justify-content: space-evenly;
+            .headerName {
+                font-size: 48px;
+                margin: 0;
+                position: relative;
+            }
+
+            .buttons {   
+                display: flex;
+                width: 242px;
+                justify-content: space-between; 
+                %button {
+                width: 103px;
+                height: 44px;
+                border: 1px solid #000000;
+                border-radius: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                }
+                .buttonPlay {
+                @extend %button;
+                background: #76CCFB;
+                color: #0F1E36;
+                }
+                .buttonSave {
+                @extend %button;
+                img {
+                    width: 18px;
+                    height: 14px;
+                }
+                }                
+                img {
+                width: 24px;
+                height: 24px;
+                left: 9px;
+                position: relative;
+                }
+            }
+        }
+    }
+    .homepage {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 44px;
+        .homepageUp {
+            text-align: center;
+            .columnHeadings {
+                font-size: 18px;
+                display: flex;
+                width: 1032px;
+                justify-content: space-between;
+                left: 8px;
+                position: relative;
+                .column {
+                    position: relative;
+                    left: 56px;
+                }
+                .number {
+                    position: relative;
+                    left: 80px;
+                }
+                .artist {left: 63px;}
+                .album {left: 71px;}
+                .add {left: 52px;}
+            }
+        }
+        .tracks {
+            font-size: 18px;
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            padding-top: 57px;
+            justify-content: space-between;
+            .number {
+                position: relative;
+                left: 89px;
+            }
+            .imgAndNameTrack {
+                display: flex;
+                align-items: center;
+                .trackImg {
+                    left: 13px;
+                    position: relative;
+                }
+                img {
+                    width: 62px;
+                    height: 41px
+                }
+                .trackName {
+                    font-size: 20px;
+                    padding-left: 26px;
+                }
+                
+            }
+            .duration {
+                right: 50px;
+                position: relative;
+            }
+            .artistNameTrack {
+                right: 35px;
+                position: relative;
+            }
+            .nameAlbumTrack {
+                position: relative;
+                right: 20px;
+            }
+            .buttonAddPlaylistTrack {
+                position: relative;
+                left: 17px;
+                bottom: 6px;
+            }
+        }
+    }
+}

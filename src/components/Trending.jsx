@@ -1,4 +1,4 @@
-export default function trending() {
+export default function Trending() {
     return (
         <div className='trendingDownSlider'>
         
