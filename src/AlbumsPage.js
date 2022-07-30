@@ -1,28 +1,27 @@
 import ControllTrack from "./components/ControlTrack";
 import "./components/style/albumsPage.scss";
-import test1 from './components/Music albums/Bandana/Bandana_I.jpg';
-import testimg1 from "./components/images/player-play.png";
-import testimg2 from "./components/images/player-list-add.png";
-import testimg3 from "./components/Music albums/Bandana/Big Baby Tape kizaru - 99 Problems/Big Baby Tape kizaru - 99 Problems.jpeg"
-import testimg4 from "./components/images/plus.png";
+import PlayImg from "./components/images/player-play.png";
+import AddImg from "./components/images/player-list-add.png";
+import TrackInAlbumPage from "./components/TrackInAlbumPage";
 
-
-export default function AlbumsPage() {
+export default function AlbumsPage(props) {
+    const massAlbum = props.massAlbum
+    const massAlbumTrack = props.massAlbumTrack
     return (
         <div className="containerAlbumPage">
             <div className="header">
                 <div className="imgAndName">
-                    <img className="img" src={test1}></img>
-                    <div className="nameOnImg">KIZARA</div>
+                    <img className="img" src={massAlbum.imgAlbum}></img>
+                    <div className="nameOnImg">{massAlbum.nameAlbum}</div>
                 </div>
                 <div className="informationAlbum">
-                    <h1 className="headerName">KIZARA</h1>
-                    <div className="mountArtists">1 Artists</div>
-                    <div className="mountSongs">15 Songs</div>
-                    <div className="lenghtTime">2h 40mins</div>
+                    <h1 className="headerName">{massAlbum.nameArtist}</h1>
+                    <div className="mountArtists">{massAlbum.numberOfArtists} Artists</div>
+                    <div className="mountSongs">{massAlbum.numberOfTracks} Songs</div>
+                    <div className="lenghtTime">{massAlbum.durationAlbum}</div>
                     <div className="buttons">
-                        <div className="buttonPlay">Play<img src={testimg1}></img></div>
-                        <div className="buttonSave">Save<img src={testimg2}></img></div>
+                        <div className="buttonPlay">Play<img src={PlayImg}></img></div>
+                        <div className="buttonSave">Save<img src={AddImg}></img></div>
                     </div>
                 </div>
             </div>
@@ -36,17 +35,8 @@ export default function AlbumsPage() {
                         <div className="column album">Album</div>
                         <div className="column add">Add to playlist</div>
                     </div>
-                    <div className="tracks">
-                        <div className="number">1</div>
-                        <div className="imgAndNameTrack">
-                            <img className="trackImg" src={testimg3}></img>
-                            <div className="trackName">99 Problems</div>   
-                        </div>
-                        <div className="duration">02:34</div>
-                        <div className="artistNameTrack">Kizaru</div>
-                        <div className="nameAlbumTrack">Solo</div>
-                        <img className="buttonAddPlaylistTrack" src={testimg4}></img>
-                    </div>
+                    {massAlbumTrack.map(massAlbumTrack =>
+                    <TrackInAlbumPage massAlbumTrack={massAlbumTrack} key={massAlbumTrack.id}/>)}
                 </div>
                 <div className="homepageDown">
                     <ControllTrack/>

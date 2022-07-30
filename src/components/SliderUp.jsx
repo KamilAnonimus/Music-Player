@@ -42,9 +42,9 @@ class sliderUp extends Component {
             <div className="wrapper">
                 <div className="viewport" onClick={ e => this.SwipePositionTrack()} onMouseDown={ e => mousedown = window.event.clientX}>
                     <ul style={ style }>
-                        <li><Link className="linkSliderUp" to={"/albumsPage"}><img src={png1UpSlider}/></Link></li>
-                        <li><Link className="linkSliderUp" to={"/albumsPage"}><img src={png2UpSlider}/></Link></li>
-                        <li><Link className="linkSliderUp" to={"/albumsPage"}><img src={png3UpSlider}/></Link></li>
+                        <li><Link className="linkSliderUp" to={"/bandana"}><img src={png1UpSlider}/></Link></li>
+                        <li><Link className="linkSliderUp" to={"/millionDollar"}><img src={png2UpSlider}/></Link></li>
+                        <li><Link className="linkSliderUp" to={"/yamakasi"}><img src={png3UpSlider}/></Link></li>
                     </ul>
                 </div>
                 <div className="ButtonControls">

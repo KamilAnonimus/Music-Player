@@ -11,15 +11,3 @@ root.render(
     </BrowserRouter> 
   </React.StrictMode>,
 );
-
-const massTracks = []
-massTracks[0] = {
-  name: "Kizara",
-}
-massTracks[1] = {
-  name: "Morgenshtern"
-}
-massTracks[2] = {
-  name: "Miyagi & Andy Panda"
-}
-console.log(massTracks)
