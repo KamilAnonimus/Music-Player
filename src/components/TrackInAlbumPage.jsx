@@ -1,9 +1,21 @@
 import PlusImg from "./images/plus.png";
+import { useState } from 'react';
+import ControllTrack from "./ControlTrack";
 
 export default function TrackInAlbumPage(props) {
     const massAlbumTrack = props.massAlbumTrack
+    const massAlbum = props.massAlbum
+    const [isPlayingControlTrack, setIsPlayingControlTrack] = useState(false)
+
+    const OnControllTrack = () => {
+        if(!isPlayingControlTrack && localStorage.length < 1) {
+            localStorage.setItem('controllMusicTrack', 'on');
+            localStorage.setItem('idTrack',`${massAlbumTrack.id}`)
+            setIsPlayingControlTrack(true)
+        }
+    } 
     return (
-        <div className="tracksAlbum">
+        <div className="tracksAlbum" onClick={OnControllTrack}>
             <div className="number">{massAlbumTrack.id}</div>
             <div className="imgAndNameTrack">
                 <img className="trackImg" src={massAlbumTrack.imgTrack}></img>
@@ -13,6 +25,7 @@ export default function TrackInAlbumPage(props) {
             <div className="artistNameTrack">{massAlbumTrack.artist}</div>
             <div className="nameAlbumTrack">{massAlbumTrack.album}</div>
             <img className="buttonAddPlaylistTrack" src={PlusImg}></img>
+            <ControllTrack isPlayingControlTrack={isPlayingControlTrack} massAlbumTrack={massAlbumTrack} massAlbum={massAlbum.id} massTrack={props.massTrack}/>
         </div>
     )
 }

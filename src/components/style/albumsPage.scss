@@ -88,11 +88,13 @@
     }
     .homepage {
         display: flex;
-        justify-content: space-between;
         position: relative;
         top: 44px;
+        flex-direction: column;
+        align-items: flex-start;
         .homepageUp {
             text-align: center;
+            padding-bottom: 110px;
             .columnHeadings {
                 font-size: 18px;
                 display: flex;
@@ -112,56 +114,56 @@
                 .album {left: 71px;}
                 .add {left: 52px;}
             }
-        }
-        .tracksAlbum {
-            font-size: 18px;
-            color: #FFFFFF;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            position: relative;
-            padding-top: 57px;
-            justify-content: space-between;
-            .number {
-                position: relative;
-                left: 89px;
-            }
-            .imgAndNameTrack {
+            .tracksAlbum {
+                font-size: 18px;
+                color: #FFFFFF;
                 display: flex;
+                flex-direction: row;
                 align-items: center;
-                left: 20px;
                 position: relative;
-                width: 192px;
-                .trackImg {
-                    left: 13px;
+                padding-top: 57px;
+                justify-content: space-between;
+                .number {
+                    position: relative;
+                    left: 89px;
+                }
+                .imgAndNameTrack {
+                    display: flex;
+                    align-items: center;
+                    left: 20px;
+                    position: relative;
+                    width: 192px;
+                    .trackImg {
+                        left: 13px;
+                        position: relative;
+                    }
+                    img {
+                        width: 62px;
+                        height: 41px
+                    }
+                    .trackName {
+                        font-size: 20px;
+                        padding-left: 26px;
+                    }
+                    
+                }
+                .duration {
+                    right: 23px;
                     position: relative;
                 }
-                img {
-                    width: 62px;
-                    height: 41px
+                .artistNameTrack {
+                    width: 115px;
                 }
-                .trackName {
-                    font-size: 20px;
-                    padding-left: 26px;
+                .nameAlbumTrack {
+                    width: 70px;
+                    position: relative;
+                    right: 20px;
                 }
-                
-            }
-            .duration {
-                right: 23px;
-                position: relative;
-            }
-            .artistNameTrack {
-                width: 115px;
-            }
-            .nameAlbumTrack {
-                width: 70px;
-                position: relative;
-                right: 20px;
-            }
-            .buttonAddPlaylistTrack {
-                position: relative;
-                left: 17px;
-                bottom: 6px;
+                .buttonAddPlaylistTrack {
+                    position: relative;
+                    left: 17px;
+                    bottom: 6px;
+                }
             }
         }
     }

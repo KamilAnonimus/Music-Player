@@ -3,10 +3,22 @@ import "./components/style/albumsPage.scss";
 import PlayImg from "./components/images/player-play.png";
 import AddImg from "./components/images/player-list-add.png";
 import TrackInAlbumPage from "./components/TrackInAlbumPage";
+import { useState } from 'react';
 
 export default function AlbumsPage(props) {
     const massAlbum = props.massAlbum
     const massAlbumTrack = props.massAlbumTrack
+    const [isPlayingControlTrack, setIsPlayingControlTrack] = useState(false)
+    localStorage.clear()
+    const OnControllTrack = () => {
+        if(!isPlayingControlTrack && localStorage.length < 1) {
+            setIsPlayingControlTrack(true)
+        }
+    
+        if(isPlayingControlTrack) {
+            setIsPlayingControlTrack(false)
+        }
+    }
     return (
         <div className="containerAlbumPage">
             <div className="header">
@@ -20,7 +32,7 @@ export default function AlbumsPage(props) {
                     <div className="mountSongs">{massAlbum.numberOfTracks} Songs</div>
                     <div className="lenghtTime">{massAlbum.durationAlbum}</div>
                     <div className="buttons">
-                        <div className="buttonPlay">Play<img src={PlayImg}></img></div>
+                        <div className="buttonPlay" onClick={OnControllTrack}>Play<img src={PlayImg}></img></div>
                         <div className="buttonSave">Save<img src={AddImg}></img></div>
                     </div>
                 </div>
@@ -36,10 +48,10 @@ export default function AlbumsPage(props) {
                         <div className="column add">Add to playlist</div>
                     </div>
                     {massAlbumTrack.map(massAlbumTrack =>
-                    <TrackInAlbumPage massAlbumTrack={massAlbumTrack} key={massAlbumTrack.id}/>)}
+                    <TrackInAlbumPage massAlbumTrack={massAlbumTrack} massAlbum={massAlbum} key={massAlbumTrack.id} OnControllTrack={OnControllTrack} massTrack={props.massTrack}/>)}
                 </div>
                 <div className="homepageDown">
-                    <ControllTrack/>
+                    <ControllTrack isPlayingControlTrack={isPlayingControlTrack} massAlbumTrack={massAlbumTrack[0]} massTrack={props.massTrack}/>
                 </div>
             </div>
         </div>

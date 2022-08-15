@@ -46,10 +46,46 @@ import MiyaGiAndyPandaAlbumTrackImg6 from './components/Music albums/MiyaGi & An
 import MiyaGiAndyPandaAlbumTrackImg7 from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Психопатия/maxresdefault (1).jpg';
 import MiyaGiAndyPandaAlbumTrackImg8 from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Там Ревели Горы/maxresdefault.jpg';
 import MiyaGiAndyPandaAlbumTrackImg9 from './components/Music albums/MiyaGi & Andy Panda/MiyaGi feat. Andy Panda - Utopia/ab67616d0000b2739524ceed456af9f753f75dd8.jpeg';
+import BandanAlbumTrackProblemsAudio from './components/Music albums/Bandana/Big Baby Tape kizaru - 99 Problems/Big Baby Tape kizaru - 99 Problems-music-2021.ru.mp3';
+import BandanAlbumTrackAndrewStoryAudio from './components/Music albums/Bandana/Big Baby Tape kizaru - Andrew Story/Big Baby Tape kizaru - Andrew Story-music-2021.ru.mp3';
+import BandanAlbumTrackBandanaAudio from './components/Music albums/Bandana/Big Baby Tape kizaru - Bandana/Big Baby Tape kizaru - Bandana-music-2021.ru.mp3';
+import BandanAlbumTrackNightsCrazyAudio from './components/Music albums/Bandana/Big Baby Tape kizaru - Big Tymers-music-2021.ru/Big Baby Tape kizaru - Big Tymers-music-2021.ru.mp3'
+import BandanAlbumTrackBigTymersAudio from './components/Music albums/Bandana/kizaru - 5 Nights Crazy/Big Baby Tape kizaru - 5 Nights Crazy-music-2021.ru.mp3'
+import BandanAlbumTrackBonVoyageAudio from './components/Music albums/Bandana/Big Baby Tape kizaru - Bon Voyage-music-2021.ru/Big Baby Tape kizaru - Bon Voyage-music-2021.ru.mp3'
+import BandanAlbumTrackDirrtAudio from './components/Music albums/Bandana/Big Baby Tape kizaru - Dirrt-music-2021.ru/Big Baby Tape kizaru - Dirrt-music-2021.ru.mp3'
+import BandanAlbumTrackErrbodySleepingAudio from './components/Music albums/Bandana/Big Baby Tape kizaru - Errbody Sleeping-music-2021.ru/Big Baby Tape kizaru - Errbody Sleeping-music-2021.ru.mp3'
+import BandanAlbumTrackMamaMakusaAudio from './components/Music albums/Bandana/Big Baby Tape kizaru - Mama Makusa-music-2021.ru/Big Baby Tape kizaru - Mama Makusa-music-2021.ru.mp3'
+import BandanAlbumTrackMillionAudio from './components/Music albums/Bandana/Big Baby Tape kizaru - Million-music-2021.ru/Big Baby Tape kizaru - Million-music-2021.ru.mp3'
+import BandanAlbumTrackRideOrDieAudio from './components/Music albums/Bandana/Big Baby Tape kizaru - Ride Or Die-music-2021.ru/Big Baby Tape kizaru - Ride Or Die-music-2021.ru.mp3'
+import BandanAlbumTrackSlipSlideAudio from './components/Music albums/Bandana/Big Baby Tape kizaru - Slip  Slide-music-2021.ru/Big Baby Tape kizaru - Slip  Slide-music-2021.ru.mp3'
+import BandanAlbumTrackSoIcyNihaoAudio from './components/Music albums/Bandana/So Icy Nihao-music-2021.ru/Big Baby Tape kizaru - So Icy Nihao-music-2021.ru.mp3'
+import MillionDollarBusinessAlbumAristocratAudio from './components/Music albums/Million Dollar: Business/MORGENSHTERN - Aristocrat/MORGENSHTERN - Aristocrat.mp3'
+import MillionDollarBusinessAlbumDineroAudio from './components/Music albums/Million Dollar: Business/MORGENSHTERN - Dinero/MORGENSHTERN - Dinero.mp3'
+import MillionDollarBusinessAlbumGTAAudio from './components/Music albums/Million Dollar: Business/MORGENSHTERN - GTA/MORGENSHTERN - GTA.mp3'
+import MillionDollarBusinessAlbumHublotAudio from './components/Music albums/Million Dollar: Business/MORGENSHTERN - Hublot/MORGENSHTERN - Hublot.mp3'
+import MillionDollarBusinessAlbumNominaloAudio from './components/Music albums/Million Dollar: Business/MORGENSHTERN - Nominalo/MORGENSHTERN - Nominalo.mp3'
+import MillionDollarBusinessAlbumOLALAAudio from './components/Music albums/Million Dollar: Business/MORGENSHTERN - OLALA/MORGENSHTERN - OLALA.mp3'
+import MillionDollarBusinessAlbumPullUpAudio from './components/Music albums/Million Dollar: Business/MORGENSHTERN - Pull Up/MORGENSHTERN - Pull Up.mp3'
+import MillionDollarBusinessAlbumКогдаНасОтпуститAudio from './components/Music albums/Million Dollar: Business/MORGENSHTERN - Когда Нас Отпустит/MORGENSHTERN - Когда Нас Отпустит.mp3'
+import MillionDollarBusinessAlbumМанияAudio from './components/Music albums/Million Dollar: Business/MORGENSHTERN - Мания/MORGENSHTERN - Мания.mp3'
+import MillionDollarBusinessAlbumПапинТанкAudio from './components/Music albums/Million Dollar: Business/MORGENSHTERN - Папин Танк/MORGENSHTERN - Папин Танк.mp3'
+import MillionDollarBusinessAlbumСкитОтvsbattlevideoAudio from './components/Music albums/Million Dollar: Business/MORGENSHTERN - Скит От @vsbattlevideo/MORGENSHTERN - Скит От @vsbattlevideo.mp3'
+import MillionDollarBusinessAlbumЯКогдаНибудьУйдуAudio from './components/Music albums/Million Dollar: Business/MORGENSHTERN - Я Когда-Нибудь Уйду/MORGENSHTERN - Я Когда-Нибудь Уйду.mp3'
+import MillionDollarBusinessAlbumЯНаТаблахAudio from './components/Music albums/Million Dollar: Business/MORGENSHTERN - Я На Таблах/MORGENSHTERN - Я На Таблах.mp3'
+import MiyaGiAndyPandaAlbumTrackMedicineAudio from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Medicine/MiyaGi & Andy Panda - Medicine.mp3'
+import MiyaGiAndyPandaAlbumTrackMinorAudio from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Minor/MiyaGi & Andy Panda - Minor.mp3'
+import MiyaGiAndyPandaAlbumTrackTantraAudio from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Tantra/MiyaGi & Andy Panda - Tantra.mp3'
+import MiyaGiAndyPandaAlbumTrackYamakasiAudio from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Yamakasi/MiyaGi & Andy Panda - Yamakasi.mp3'
+import MiyaGiAndyPandaAlbumTrackАтлантAudio from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Атлант/MiyaGi & Andy Panda - Атлант.mp3'
+import MiyaGiAndyPandaAlbumTrackМалоНамAudio from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Мало Нам/MiyaGi & Andy Panda - Мало Нам.mp3'
+import MiyaGiAndyPandaAlbumTrackПсихопатияAudio from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Психопатия/MiyaGi & Andy Panda - Психопатия.mp3'
+import MiyaGiAndyPandaAlbumTrackТамРевелиГорыAudio from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Там Ревели Горы/MiyaGi & Andy Panda - Там Ревели Горы.mp3'
+import MiyaGiAndyPandaAlbumTrackUtopiaAudio from './components/Music albums/MiyaGi & Andy Panda/MiyaGi feat. Andy Panda - Utopia/MiyaGi feat. Andy Panda - Utopia.mp3'
 
 export default function ButtonApp() {
   const massAlbum = []
-  massAlbum[0] = {
+  massAlbum[1] = {
+    id:1,
     imgAlbum:BandanAlbumImg,
     nameAlbum:"BANDANA",
     nameArtist:"KIZARU & BIG BABY TAPE",
@@ -73,7 +109,8 @@ export default function ButtonApp() {
     {id:13, imgTrack:BandanAlbumTrackImg13, name:"So Icy Nihao", durationTrack:"2:33", artist:"Big Baby & TapeWaves B", album:"Bandana"}
   ])
 
-  massAlbum[1] = {
+  massAlbum[2] = {
+    id:2,
     imgAlbum:MillionDollarBusinessAlbumImg,
     nameAlbum:"MILLION DOLLAR",
     nameArtist:"MORGENSHTERN",
@@ -97,7 +134,7 @@ export default function ButtonApp() {
     {id:13, imgTrack:MillionDollarBusinessAlbumTrackImg13, name:"Я на таблах", durationTrack:"2:26", artist:"Алишер Моргенштерн & Александр Запорожец", album:"Million Dollar"}
   ])
 
-  massAlbum[2] = {
+  massAlbum[3] = {
     imgAlbum:MiyaGiAndyPandaAlbumImg,
     nameAlbum:"YAMAKASI",
     nameArtist:"MiyaGi & Andy Panda",
@@ -117,6 +154,52 @@ export default function ButtonApp() {
     {id:9, imgTrack:MiyaGiAndyPandaAlbumTrackImg9, name:"Utopia", durationTrack:"3:29", artist:"MiyaGi & Andy Panda", album:"Yamakasi"}
   ])
 
+  const massTrack = [
+    [
+      [0, BandanAlbumTrackProblemsAudio, BandanAlbumTrackImg1, "99 Problems", "Big Baby Tape"],
+      [1, BandanAlbumTrackProblemsAudio, BandanAlbumTrackImg1, "99 Problems", "Big Baby Tape"],
+      [2, BandanAlbumTrackAndrewStoryAudio, BandanAlbumTrackImg2 ,"Andrew Story", "Big Baby Tape"],
+      [3, BandanAlbumTrackBandanaAudio, BandanAlbumTrackImg3 ,"Bandana", "Montana"],
+      [4, BandanAlbumTrackNightsCrazyAudio, BandanAlbumTrackImg4 ,"5 Nights Crazy", "Deyjan Beats"],
+      [5, BandanAlbumTrackBigTymersAudio, BandanAlbumTrackImg5 ,"Big Tymers", "Culoso & beatsFlory"],
+      [6, BandanAlbumTrackBonVoyageAudio, BandanAlbumTrackImg6 ,"Bon Voyage", "Evince Beats & Call Me G"],
+      [7, BandanAlbumTrackDirrtAudio, BandanAlbumTrackImg7 ,"Dirrt", "Big Baby Tape"],
+      [8, BandanAlbumTrackErrbodySleepingAudio, BandanAlbumTrackImg8 ,"Errbody Sleepin", "-"],
+      [9, BandanAlbumTrackMamaMakusaAudio, BandanAlbumTrackImg9 ,"Mama Makusa", "YG Woods"],
+      [10, BandanAlbumTrackMillionAudio, BandanAlbumTrackImg10 ,"Million", "Big Baby Tape"],
+      [11, BandanAlbumTrackRideOrDieAudio, BandanAlbumTrackImg11 ,"Ride Or Die", "JunioR Beats"],
+      [12, BandanAlbumTrackSlipSlideAudio, BandanAlbumTrackImg12 ,"Slip & Slide", "Big Baby Tape"],
+      [13, BandanAlbumTrackSoIcyNihaoAudio, BandanAlbumTrackImg13 ,"So Icy Nihao", "Big Baby & TapeWaves B"]
+    ],
+    [
+      [0, MillionDollarBusinessAlbumAristocratAudio, MillionDollarBusinessAlbumTrackImg1, "Aristocrat", "Алишер Моргенштерн & Александр Марков"],
+      [1, MillionDollarBusinessAlbumAristocratAudio, MillionDollarBusinessAlbumTrackImg1, "Aristocrat", "Алишер Моргенштерн & Александр Марков"],
+      [2, MillionDollarBusinessAlbumDineroAudio, MillionDollarBusinessAlbumTrackImg2, "Dinero", "Алишер Моргенштерн & Руслан Валеев"],
+      [3, MillionDollarBusinessAlbumGTAAudio, MillionDollarBusinessAlbumTrackImg3, "GTA", "Алишер Моргенштерн & Руслан Валеев"],
+      [4, MillionDollarBusinessAlbumHublotAudio, MillionDollarBusinessAlbumTrackImg4, "Hublot", "Алишер Моргенштерн & Артём Готлиб"],
+      [5, MillionDollarBusinessAlbumNominaloAudio, MillionDollarBusinessAlbumTrackImg5, "Nominalo", "Алишер Моргенштерн & Игорь Власов"],
+      [6, MillionDollarBusinessAlbumOLALAAudio, MillionDollarBusinessAlbumTrackImg6, "Olala", "Алишер Моргенштерн & Александр Марков"],
+      [7, MillionDollarBusinessAlbumPullUpAudio, MillionDollarBusinessAlbumTrackImg7, "Pull Up", "Алишер Моргенштерн & Алексей Сехов & Олег Гладьянов"],
+      [8, MillionDollarBusinessAlbumКогдаНасОтпуститAudio, MillionDollarBusinessAlbumTrackImg8, "Когда нас отпустит", "Алишер Моргенштерн & Роман Миронченко & Виктор Безруков"],
+      [9, MillionDollarBusinessAlbumМанияAudio, MillionDollarBusinessAlbumTrackImg9, "Мания", "Алишер Моргенштерн & Искандер Сулейманов"],
+      [10, MillionDollarBusinessAlbumПапинТанкAudio, MillionDollarBusinessAlbumTrackImg10, "Папин танк", "Алишер Моргенштерн & Diamond Style"],
+      [11, MillionDollarBusinessAlbumСкитОтvsbattlevideoAudio, MillionDollarBusinessAlbumTrackImg11, "Скит от @VSBattleVide", "Алишер Моргенштерн"],
+      [12, MillionDollarBusinessAlbumЯКогдаНибудьУйдуAudio, MillionDollarBusinessAlbumTrackImg12, "Я когда-нибудь уйду", "Алишер Моргенштерн & Даниэль Альгуасиль Монсо & Луис Виткевиц"],
+      [13, MillionDollarBusinessAlbumЯНаТаблахAudio, MillionDollarBusinessAlbumTrackImg13, "Я на таблах", "Алишер Моргенштерн & Александр Запорожец"]
+    ],
+    [
+      [0, MiyaGiAndyPandaAlbumTrackMedicineAudio, MiyaGiAndyPandaAlbumTrackImg1, "Medicine", "MiyaGi & Andy Panda"],
+      [1, MiyaGiAndyPandaAlbumTrackMedicineAudio, MiyaGiAndyPandaAlbumTrackImg1, "Medicine", "MiyaGi & Andy Panda"],
+      [2, MiyaGiAndyPandaAlbumTrackMinorAudio, MiyaGiAndyPandaAlbumTrackImg2, "Minor", "MiyaGi & Andy Panda"],
+      [3, MiyaGiAndyPandaAlbumTrackTantraAudio, MiyaGiAndyPandaAlbumTrackImg3, "Tantra", "MiyaGi & Andy Panda"],
+      [4, MiyaGiAndyPandaAlbumTrackYamakasiAudio, MiyaGiAndyPandaAlbumTrackImg4, "Yamakasi", "MiyaGi & Andy Panda"],
+      [5, MiyaGiAndyPandaAlbumTrackАтлантAudio, MiyaGiAndyPandaAlbumTrackImg5, "Atlant", "MiyaGi & Andy Panda"],
+      [6, MiyaGiAndyPandaAlbumTrackМалоНамAudio, MiyaGiAndyPandaAlbumTrackImg6, "Малонам", "MiyaGi & Andy Panda"],
+      [7, MiyaGiAndyPandaAlbumTrackПсихопатияAudio, MiyaGiAndyPandaAlbumTrackImg7, "Психопатия", "MiyaGi & Andy Panda"],
+      [8, MiyaGiAndyPandaAlbumTrackТамРевелиГорыAudio, MiyaGiAndyPandaAlbumTrackImg8, "Тамревелигоры", "MiyaGi & Andy Panda"],
+      [9, MiyaGiAndyPandaAlbumTrackUtopiaAudio, MiyaGiAndyPandaAlbumTrackImg9, "Utopia", "MiyaGi & Andy Panda"]
+    ]
+  ]
   return (
     <Routes>
         <Route path="/" element={<Homepage />} >
@@ -130,9 +213,9 @@ export default function ButtonApp() {
       <Route>              
         <Route index element={<All />}></Route>
         <Route path="/albumsPage" element={<AlbumsPage/>}></Route>
-        <Route path="/bandana" element={<AlbumsPage massAlbum={massAlbum[0]} massAlbumTrack={massAlbumTrack0}/>}></Route>
-        <Route path="/millionDollar" element={<AlbumsPage massAlbum={massAlbum[1]} massAlbumTrack={massAlbumTrack1}/>}></Route>
-        <Route path="/yamakasi" element={<AlbumsPage massAlbum={massAlbum[2]} massAlbumTrack={massAlbumTrack2}/>}></Route>
+        <Route path="/bandana" element={<AlbumsPage massAlbum={massAlbum[1]} massAlbumTrack={massAlbumTrack0} massTrack={massTrack[0]}/>}></Route>
+        <Route path="/millionDollar" element={<AlbumsPage massAlbum={massAlbum[2]} massAlbumTrack={massAlbumTrack1} massTrack={massTrack[1]}/>}></Route>
+        <Route path="/yamakasi" element={<AlbumsPage massAlbum={massAlbum[3]} massAlbumTrack={massAlbumTrack2} massTrack={massTrack[2]}/>}></Route>
       </Route>
     </Routes>
   );

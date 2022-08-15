@@ -1,0 +1,80 @@
+.controlMusicPanel {
+    width: 1042px;
+    height: 71px;
+    display: flex;
+    justify-content: space-between;
+    background: #0F1E36;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 65px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 99;
+    color: #76CCFB;
+    font-size: 18px;
+    margin-left: 50px;
+    .informationMusic {
+        height: 72px;
+        display: flex;
+        .avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 100%;
+            padding-right: 19px;
+        }
+        .textInformation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            .musicName {
+            height: 25px;
+            font-size: 20px;
+            }
+            .avtorNameMusic {font-size: 14px;}
+        }
+    }
+    .control {
+        display: flex;
+        width: 724px;
+        height: 71px;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-right: 18px;
+        .slider {
+            display: flex;
+            width: 445px;
+            justify-content: space-around;
+            align-items: center;
+            .sliderTrack {
+                width: 403px;
+                height: 7px;
+                position: relative;
+                right: 2px;
+                top: 1px;
+            }
+            input[type=range]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                opacity: 0;
+            }
+            .mask {
+                height: 6px;
+                position: relative;
+                bottom: 11px;
+                background: #76CCFB;
+            }
+            .time {
+                background-color:#0F1E36;
+                position: relative;
+                right: 13px;
+                text-align: right;
+                width: 55px;
+            }
+        }
+
+        .time {
+            font-size: 10px;
+            color: #FFFFFF;
+        }
+    }
+}

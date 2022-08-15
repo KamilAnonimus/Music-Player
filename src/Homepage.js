@@ -23,11 +23,10 @@ function Homepage() {
                 <Link style={{ textDecoration: 'none', color: "#76CCFB" }} className='button' to="/mostPlayed">Most Played</Link>
               </div>
               <div className='sliderDown'>
-                <Outlet />
+                <Outlet/>
               </div>
             </div>
             <div className='homepageDown'>
-              <ControllTrack/>
             </div>
           </div>
         </div>
