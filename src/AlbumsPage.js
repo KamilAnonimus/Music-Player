@@ -10,13 +10,11 @@ export default function AlbumsPage(props) {
     const massAlbumTrack = props.massAlbumTrack
     const [isPlayingControlTrack, setIsPlayingControlTrack] = useState(false)
     localStorage.clear()
-    const OnControllTrack = () => {
-        if(!isPlayingControlTrack && localStorage.length < 1) {
+
+
+    const OnControllTrack = () => {    
+        if(!isPlayingControlTrack) {            
             setIsPlayingControlTrack(true)
-        }
-    
-        if(isPlayingControlTrack) {
-            setIsPlayingControlTrack(false)
         }
     }
     return (
@@ -51,7 +49,7 @@ export default function AlbumsPage(props) {
                     <TrackInAlbumPage massAlbumTrack={massAlbumTrack} massAlbum={massAlbum} key={massAlbumTrack.id} OnControllTrack={OnControllTrack} massTrack={props.massTrack}/>)}
                 </div>
                 <div className="homepageDown">
-                    <ControllTrack isPlayingControlTrack={isPlayingControlTrack} massAlbumTrack={massAlbumTrack[0]} massTrack={props.massTrack}/>
+                    <ControllTrack isPlayingControlTrack={isPlayingControlTrack} massAlbumTrack={massAlbumTrack[0]} massTrack={props.massTrack} massAlbum={massAlbum}/>
                 </div>
             </div>
         </div>

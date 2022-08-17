@@ -2,7 +2,6 @@ import React from "react";
 import Header from './components/Header';
 import RightControlPanel from './components/ControlPanel';
 import SliderUp from './components/SliderUp';
-import ControllTrack from "./components/ControlTrack";
 import { Outlet, Link } from 'react-router-dom';
 
 function Homepage() {
@@ -25,8 +24,6 @@ function Homepage() {
               <div className='sliderDown'>
                 <Outlet/>
               </div>
-            </div>
-            <div className='homepageDown'>
             </div>
           </div>
         </div>

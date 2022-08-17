@@ -18,33 +18,37 @@ export default function ControllTrack(props) {
   const massAlbumTrack = props.massAlbumTrack
   const massTrack = props.massTrack
   let display = 'none'
+  let numberPlayTrack = localStorage.getItem('idTrack')
+  var label = document.getElementById(numberPlayTrack);
 
   const audioRef = useRef()
   const onChange = (e) => {
       const audio = audioRef.current
       audio.currentTime = (audio.duration / 100) * e.target.value
       setPercentage(e.target.value)
-
       setmusicPlay(true)
+
       if (!musicPlay) {
        setIsPlaying(true)
+       label.style.display = 'flex';
       }
       setAutoPlay(true)
   }
-
-    const play = () => {
-    const audio = audioRef.current
+  
+  const play = () => {
+  const audio = audioRef.current
     if(!isPlaying) {
       audio.play()
       setIsPlaying(true)
+      label.style.display = 'flex';
     }
 
     if(isPlaying) {      
       audio.pause()
       setIsPlaying(false)
+      label.style.display = 'none';
     }
   } 
-
 
   const getCurrDuration = (e) => {
     const percent = ((e.currentTarget.currentTime / e.currentTarget.duration) *100).toFixed(2)
@@ -68,31 +72,39 @@ export default function ControllTrack(props) {
     if (parseInt(hours, 10) > 0) {
       return `${parseInt(hours, 10)}h ${min}m ${sec}s`
     } else if (min == 0 & sec < 10) {
-      return `00m 0${sec}s`
+      return `0m ${sec}s`
     } else {
-      return `0${min}m ${sec}s`
+      return `${min}m ${sec}s`
     }
   }
 
   if (isPlayingControlTrack) { 
     display = 'flex'
     localStorage.setItem('controllMusicTrack', 'on');
+    localStorage.setItem('idTrack', `${massAlbumTrack.id}`);
   }
 
-  let numberPlayTrack = localStorage.getItem('idTrack')
+
   function nextTrack() {
     setAutoPlay(true)
-    setIsPlaying(true)
     if (numberPlayTrack < massTrack.length - 1) {
       localStorage.setItem('idTrack',`${massAlbumTrack.id+=1}`)
+      label = document.getElementById(`${localStorage.getItem("idTrack")}`);
+      label.style.display = 'flex';
+      label = document.getElementById(`${localStorage.getItem("idTrack")}`- 1);
+      label.style.display = 'none';
     }
-  } 
+  }
 
   function prevTrack() {
     setAutoPlay(true)
-    setIsPlaying(true)
     if (numberPlayTrack > 1) {
+      setIsPlaying(true)
       localStorage.setItem('idTrack',`${massAlbumTrack.id-=1}`)
+      label = document.getElementById(`${localStorage.getItem("idTrack")}`);
+      label.style.display = 'flex';
+      label = document.getElementById(`${numberPlayTrack}`);
+      label.style.display = 'none';
     }
   }
   return (

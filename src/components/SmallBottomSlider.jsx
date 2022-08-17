@@ -10,12 +10,12 @@ import png7DownSlider from './Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Pan
 import png8DownSlider from './Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Minor/MiyaGi & Andy Panda - Minor.jpeg';
 import png9DownSlider from './Music albums/Million Dollar: Business/MORGENSHTERN - GTA/hqdefault.jpg';
 import png10DownSlider from './Music albums/Million Dollar: Business/MORGENSHTERN - Hublot/20914dff41a86128311979d523022e93-250x250-11-11.jpg';
+import ControllTrack from "./ControlTrack";
 
 var positionXSliderUpTrack = 0;
 var mouseup = 0;
 var mousedown = 0;
 class sliderDown extends Component {
-
 
     constructor() {
         super();
@@ -48,6 +48,7 @@ class sliderDown extends Component {
                         <li><a href="#"><img src={png10DownSlider}/></a></li>
                     </ul>
                 </div>
+                {/* <ControllTrack/> */}
             </div>
         );
     }

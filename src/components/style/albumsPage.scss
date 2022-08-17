@@ -150,6 +150,61 @@
                 .duration {
                     right: 23px;
                     position: relative;
+                    height: 24px;
+                    .label {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        display: none;
+                        position: relative;
+                        bottom: 20px;
+                        z-index: 99;
+                        background: #0F1E36;
+                        height: 24px;
+                        .component {
+                            width: 2px;
+                            background-color: #FFFFFF;
+                            margin: 2px;
+                        }
+                        .label1 {
+                            height: 4px;
+                            animation: label infinite linear;
+                            animation-duration: 3s;
+                        }
+                        .label2 {
+                            height: 8px;
+                            animation: label infinite linear;
+                            animation-duration: 2s;
+                        }
+                        .label3 {
+                            height: 14px;
+                            animation: label infinite linear;
+                            animation-duration: 1s;
+                        }
+                        .label4 {
+                            height: 8px;
+                            animation: label infinite linear;
+                            animation-duration: 2s;
+                        }
+                        .label5 {
+                            height: 4px;
+                            animation: label infinite linear;
+                            animation-duration: 1s;
+                        }
+                    }
+                    @keyframes label {
+                        0% {padding-top: 0%;}
+                        10% {padding-top: 10%;}
+                        20% {padding-top: 20%;}
+                        30% {padding-top: 30%;}
+                        40% {padding-top: 40%;}
+                        50% {padding-top: 40%;}
+                        60% {padding-top: 40%;}
+                        70% {padding-top: 30%;}
+                        80% {padding-top: 20%;}
+                        90% {padding-top: 10%;}
+                        100% {padding-top: 0%;}
+                    }
                 }
                 .artistNameTrack {
                     width: 115px;

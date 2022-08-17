@@ -199,15 +199,23 @@ body {
                         max-height: 134.44px;
                         .viewport {
                             max-height: 134.44px;
+                            display: flex;
                             @extend %SliderViewport;
                             ul {@extend %SliderUl;}
                             ul li img {
                                 width: 108px;
                                 height: 97px;
                                 max-height: 134.44px;
+                                pointer-events: none;
                             }
                             li {
                                 width: 108px;
+                                .buttomSliderDown {
+                                    display: flex;
+                                    height: 22px;
+                                    align-items: center;
+                                
+                                }
                             }
                         }
                     }

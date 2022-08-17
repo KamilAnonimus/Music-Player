@@ -203,7 +203,7 @@ export default function ButtonApp() {
   return (
     <Routes>
         <Route path="/" element={<Homepage />} >
-          <Route index element={<All />} />
+          <Route index element={<All massTrack={massTrack[0]}/>} />
           <Route path="/trending" element={<Trending />} />
           <Route path="/featured" element={<Featured />} />
           <Route path="/newreleases" element={<NewReleases />} />
