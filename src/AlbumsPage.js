@@ -9,14 +9,17 @@ export default function AlbumsPage(props) {
     const massAlbum = props.massAlbum
     const massAlbumTrack = props.massAlbumTrack
     const [isPlayingControlTrack, setIsPlayingControlTrack] = useState(false)
-    localStorage.clear()
+    if (localStorage.length === 0) {
+        localStorage.setItem('idTrack',1)
+    } else {localStorage.clear()}
 
 
     const OnControllTrack = () => {    
-        if(!isPlayingControlTrack) {            
+        if(!isPlayingControlTrack && localStorage.length < 2) {            
             setIsPlayingControlTrack(true)
         }
     }
+
     return (
         <div className="containerAlbumPage">
             <div className="header">
@@ -49,7 +52,7 @@ export default function AlbumsPage(props) {
                     <TrackInAlbumPage massAlbumTrack={massAlbumTrack} massAlbum={massAlbum} key={massAlbumTrack.id} OnControllTrack={OnControllTrack} massTrack={props.massTrack}/>)}
                 </div>
                 <div className="homepageDown">
-                    <ControllTrack isPlayingControlTrack={isPlayingControlTrack} massAlbumTrack={massAlbumTrack[0]} massTrack={props.massTrack} massAlbum={massAlbum}/>
+                    <ControllTrack isPlayingControlTrack={isPlayingControlTrack} massAlbumTrack={massAlbumTrack[0]} massTrack={props.massTrack}/>
                 </div>
             </div>
         </div>

@@ -203,10 +203,10 @@ export default function ButtonApp() {
   return (
     <Routes>
         <Route path="/" element={<Homepage />} >
-          <Route index element={<All massTrack={massTrack[0]}/>} />
-          <Route path="/trending" element={<Trending />} />
-          <Route path="/featured" element={<Featured />} />
-          <Route path="/newreleases" element={<NewReleases />} />
+          <Route index element={<All massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
+          <Route path="/trending" element={<Trending  massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
+          <Route path="/featured" element={<Featured massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
+          <Route path="/newreleases" element={<NewReleases massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
           <Route path="/genres" element={<Genres/>} />
           <Route path="/mostPlayed" element={<MostPlayed/>} />
         </Route>

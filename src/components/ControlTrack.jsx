@@ -18,21 +18,27 @@ export default function ControllTrack(props) {
   const massAlbumTrack = props.massAlbumTrack
   const massTrack = props.massTrack
   let display = 'none'
+  if (localStorage.getItem('controllMusicTrack')) {display = 'flex'}
+  let width = '1042px'
+  let marginLeft = "50px"
+  let opacityAvtorNameMusic = '100'
+  if (localStorage.getItem('controllMusicTrack') === 'HomePage') { width = '887px'; marginLeft = "0px"; opacityAvtorNameMusic = '0' }
   let numberPlayTrack = localStorage.getItem('idTrack')
   var label = document.getElementById(numberPlayTrack);
 
   const audioRef = useRef()
   const onChange = (e) => {
-      const audio = audioRef.current
-      audio.currentTime = (audio.duration / 100) * e.target.value
-      setPercentage(e.target.value)
-      setmusicPlay(true)
+    setAutoPlay(true)
 
-      if (!musicPlay) {
-       setIsPlaying(true)
-       label.style.display = 'flex';
-      }
-      setAutoPlay(true)
+    const audio = audioRef.current
+    audio.currentTime = (audio.duration / 100) * e.target.value
+    setPercentage(e.target.value)
+    setmusicPlay(true)
+
+    if (!musicPlay) {
+      setIsPlaying(true)
+      label.style.display = 'flex';
+    }
   }
   
   const play = () => {
@@ -84,15 +90,23 @@ export default function ControllTrack(props) {
     localStorage.setItem('idTrack', `${massAlbumTrack.id}`);
   }
 
-
   function nextTrack() {
     setAutoPlay(true)
     if (numberPlayTrack < massTrack.length - 1) {
-      localStorage.setItem('idTrack',`${massAlbumTrack.id+=1}`)
+      setIsPlaying(true)
+      if(localStorage.getItem('controllMusicTrack') === "HomePage") {
+        localStorage.setItem('idTrack', Number(numberPlayTrack) + Number(1))
+        setIsPlaying(true)
+      } else {
+        localStorage.setItem('idTrack',`${massAlbumTrack.id+=1}`)
+      }
       label = document.getElementById(`${localStorage.getItem("idTrack")}`);
       label.style.display = 'flex';
       label = document.getElementById(`${localStorage.getItem("idTrack")}`- 1);
       label.style.display = 'none';
+    } else {
+      localStorage.setItem('EndOfAlbumTrack', true)
+      setIsPlaying(true)
     }
   }
 
@@ -100,20 +114,27 @@ export default function ControllTrack(props) {
     setAutoPlay(true)
     if (numberPlayTrack > 1) {
       setIsPlaying(true)
-      localStorage.setItem('idTrack',`${massAlbumTrack.id-=1}`)
+      if(localStorage.getItem('controllMusicTrack') === "HomePage") {
+        localStorage.setItem('idTrack', Number(numberPlayTrack - 1))
+      } else {
+        localStorage.setItem('idTrack',Number(`${massAlbumTrack.id-=1}`))
+      }
       label = document.getElementById(`${localStorage.getItem("idTrack")}`);
       label.style.display = 'flex';
       label = document.getElementById(`${numberPlayTrack}`);
       label.style.display = 'none';
+    } else {
+      localStorage.setItem('StartOfAlbumTrack', true)
+      setIsPlaying(true)
     }
   }
   return (
-    <div className='controlMusicPanel' style={{ display: `${display}`}}>
+    <div className='controlMusicPanel' style={{ display: `${display}`, width: `${width}`, marginLeft: `${marginLeft}`}}>
       <div className='informationMusic'>
         <img className='avatar' src={massTrack[Number(numberPlayTrack)][2]}></img>
         <div className='textInformation'>
           <div className='musicName'>{massTrack[Number(numberPlayTrack)][3]}</div>
-          <div className='avtorNameMusic'>{massTrack[Number(numberPlayTrack)][4]}</div>
+          <div className='avtorNameMusic'  style={{ opacity: `${opacityAvtorNameMusic}`}}>{massTrack[Number(numberPlayTrack)][4]}</div>
         </div>
       </div>
       <div className='control'>
