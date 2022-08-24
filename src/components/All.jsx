@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SliderDown from "./SmallBottomSlider";
 
 export default function All(props) {
@@ -10,6 +10,10 @@ export default function All(props) {
   const [VisibilityOfExtraTracks, setVisibilityOfExtraTracks] = useState(true)
 
   localStorage.clear()
+  useEffect(() => {
+    let name = { nameButton: 'all'}
+    props.colorButtons(name.nameButton)
+  }, []);
     return (
       <div className='allDownSlider'>
         <SliderDown massTrackIndex={props.massTrack[0]} VisibilityOfExtraTracks={VisibilityOfExtraTracks} massTrack={massTrack} massAlbum={massAlbum} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>

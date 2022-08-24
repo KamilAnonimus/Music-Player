@@ -200,13 +200,17 @@ export default function ButtonApp() {
       [9, MiyaGiAndyPandaAlbumTrackUtopiaAudio, MiyaGiAndyPandaAlbumTrackImg9, "Utopia", "MiyaGi & Andy Panda"]
     ]
   ]
+  const [State, setState] = useState()
+  function colorButtons(name) {
+    setState({name})
+  }
   return (
     <Routes>
-        <Route path="/" element={<Homepage />} >
-          <Route index element={<All massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
-          <Route path="/trending" element={<Trending  massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
-          <Route path="/featured" element={<Featured massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
-          <Route path="/newreleases" element={<NewReleases massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
+        <Route path="/" element={<Homepage nameButton={State}/>} >
+          <Route index element={<All colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
+          <Route path="/trending" element={<Trending colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
+          <Route path="/featured" element={<Featured colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
+          <Route path="/newreleases" element={<NewReleases colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
           <Route path="/genres" element={<Genres/>} />
           <Route path="/mostPlayed" element={<MostPlayed/>} />
         </Route>
