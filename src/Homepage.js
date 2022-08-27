@@ -10,14 +10,18 @@ function Homepage(props) {
     nameButton = props.nameButton.name
     colorButton(nameButton)
   }
+
   function colorButton() {
+    
     if (!localStorage.getItem('controllMusicTrack')) {
-      if(nameButton === 'all') {document.getElementById('all').style.color = '#FFFFFF'} else {document.getElementById('all').style.color = '#76CCFB'}
-      if(nameButton === 'trending') {document.getElementById('trending').style.color = '#FFFFFF'} else {document.getElementById('trending').style.color = '#76CCFB'}
-      if(nameButton === 'featured') {document.getElementById('featured').style.color = '#FFFFFF'} else {document.getElementById('featured').style.color = '#76CCFB'}
-      if(nameButton === 'newreleases') {document.getElementById('newreleases').style.color = '#FFFFFF'} else {document.getElementById('newreleases').style.color = '#76CCFB'}
-      if(nameButton === 'genres') {document.getElementById('genres').style.color = '#FFFFFF'} else {document.getElementById('genres').style.color = '#76CCFB'}
-      if(nameButton === 'mostPlayed') {document.getElementById('mostPlayed').style.color = '#FFFFFF'} else {document.getElementById('mostPlayed').style.color = '#76CCFB'}
+      setTimeout(() =>{
+        if(nameButton === 'all') {document.getElementById('all').style.color = '#FFFFFF'} else {document.getElementById('all').style.color = '#76CCFB'}
+        if(nameButton === 'trending') {document.getElementById('trending').style.color = '#FFFFFF'} else {document.getElementById('trending').style.color = '#76CCFB'}
+        if(nameButton === 'featured') {document.getElementById('featured').style.color = '#FFFFFF'} else {document.getElementById('featured').style.color = '#76CCFB'}
+        if(nameButton === 'newreleases') {document.getElementById('newreleases').style.color = '#FFFFFF'} else {document.getElementById('newreleases').style.color = '#76CCFB'}
+        if(nameButton === 'genres') {document.getElementById('genres').style.color = '#FFFFFF'} else {document.getElementById('genres').style.color = '#76CCFB'}
+        if(nameButton === 'mostPlayed') {document.getElementById('mostPlayed').style.color = '#FFFFFF'} else {document.getElementById('mostPlayed').style.color = '#76CCFB'}
+      }, 10)
     }
   }
     return (

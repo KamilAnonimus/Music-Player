@@ -5,6 +5,7 @@ import ControllTrack from "./ControlTrack";
 var positionXSliderUpTrack = 0;
 var mouseup = 0;
 var mousedown = 0;
+let touchup = 0;
 class sliderDown extends Component {
 
     constructor() {
@@ -14,9 +15,19 @@ class sliderDown extends Component {
         };
       }
 
-      SwipePositionTrack(e) {
+    SwipePositionTrack(e) {
         mouseup = window.event.clientX;
         positionXSliderUpTrack += mouseup - mousedown;
+        this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
+    }
+
+    OnTouchStartPosition(e) {
+        touchup = window.event.changedTouches[0].clientX
+    }
+
+    OnTouchEndPosition(e) {
+        let touchdown = window.event.changedTouches[0].clientX
+        positionXSliderUpTrack += touchdown - touchup
         this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
     }
     render () {
@@ -46,7 +57,7 @@ class sliderDown extends Component {
     }
         return (
             <div className="wrapper">
-                <div className="viewport" onClick={ e => this.SwipePositionTrack()} onMouseDown={ e => mousedown = window.event.clientX}>
+                <div className="viewport" onClick={ e => this.SwipePositionTrack()} onMouseDown={ e => mousedown = window.event.clientX} onTouchStart={e => this.OnTouchStartPosition()} onTouchEnd={e => this.OnTouchEndPosition()}>
                     <ul style={ style }>
                     {massTrack0.map(massTrack0 => 
                         <li key={massTrack0[0]}><a className="buttomSliderDown" onClick={() => {

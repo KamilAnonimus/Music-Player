@@ -10,12 +10,16 @@ import { Link } from 'react-router-dom';
 var positionXSliderUpTrack = 0;
 var mouseup = 0;
 var mousedown = 0;
+let touchup = 0;
 class sliderUp extends Component {
 
     constructor() {
         super();
         this.state = {
             style: '',
+        };
+        this.test100 = {
+            number: '',
         };
       }
 
@@ -35,12 +39,21 @@ class sliderUp extends Component {
         this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
     }
 
+    OnTouchStartPosition(e) {
+        touchup = window.event.changedTouches[0].clientX
+    }
+
+    OnTouchEndPosition(e) {
+        let touchdown = window.event.changedTouches[0].clientX
+        positionXSliderUpTrack += touchdown - touchup
+        this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
+    }
     render () {
         const style = { transform: this.state.style };
         return (
         <div className='sliderUp'>
             <div className="wrapper">
-                <div className="viewport" onClick={ e => this.SwipePositionTrack()} onMouseDown={ e => mousedown = window.event.clientX}>
+                <div className="viewport" onClick={ e => this.SwipePositionTrack()} onMouseDown={ e => mousedown = window.event.clientX} onTouchStart={e => this.OnTouchStartPosition()} onTouchEnd={e => this.OnTouchEndPosition()}>
                     <ul style={ style }>
                         <li><Link className="linkSliderUp" to={"/bandana"}><img src={png1UpSlider}/></Link></li>
                         <li><Link className="linkSliderUp" to={"/millionDollar"}><img src={png2UpSlider}/></Link></li>
