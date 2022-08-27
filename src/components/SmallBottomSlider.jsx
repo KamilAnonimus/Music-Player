@@ -66,7 +66,11 @@ class sliderDown extends Component {
                                 localStorage.setItem('idTrack',`${massTrack0[0]}`);
                                 localStorage.setItem('idAlbum', 0)
                             }
-                        }}><img src={`${massTrack0[2]}`}/></a>
+                        }}>
+                                <img src={`${massTrack0[2]}`}/>
+                                <div className="nameTrack">{massTrack0[3]}</div>
+                                <div className="nameArtists">{massTrack0[4]}</div>
+                            </a>
                         </li>
                     )}
                     {massTrack1.map(massTrack1 =>
@@ -76,7 +80,10 @@ class sliderDown extends Component {
                                 localStorage.setItem('idTrack',`${massTrack1[0]}`);
                                 localStorage.setItem('idAlbum', 1)
                             }
-                        }}><img src={`${massTrack1[2]}`}/></a>
+                        }}>     <img src={`${massTrack1[2]}`}/>
+                                <div className="nameTrack">{massTrack1[3]}</div>
+                                <div className="nameArtists">{massTrack1[4]}</div>
+                            </a>
                         </li>
                     )}
                     {massTrack2.map(massTrack2 =>
@@ -86,7 +93,10 @@ class sliderDown extends Component {
                             localStorage.setItem('idTrack',`${massTrack2[0]}`);
                             localStorage.setItem('idAlbum', 2)
                         }
-                        }}><img src={`${massTrack2[2]}`}/></a>
+                        }}>     <img src={`${massTrack2[2]}`}/>
+                                <div className="nameTrack">{massTrack2[3]}</div>
+                                <div className="nameArtists">{massTrack2[4]}</div>
+                            </a>
                         </li>
                     )}
                     </ul>

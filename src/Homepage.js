@@ -1,6 +1,4 @@
 import React from "react";
-import Header from './components/Header';
-import RightControlPanel from './components/ControlPanel';
 import SliderUp from './components/SliderUp';
 import { Outlet, Link } from 'react-router-dom';
 
@@ -12,7 +10,6 @@ function Homepage(props) {
   }
 
   function colorButton() {
-    
     if (!localStorage.getItem('controllMusicTrack')) {
       setTimeout(() =>{
         if(nameButton === 'all') {document.getElementById('all').style.color = '#FFFFFF'} else {document.getElementById('all').style.color = '#76CCFB'}
@@ -27,9 +24,7 @@ function Homepage(props) {
     return (
       <>
         <div className='container'>
-          <Header/>
           <div className='homepage'>
-            <RightControlPanel/>
             <div className='homepageUp'>
               <SliderUp/>
               <div className='CenterButtons' >

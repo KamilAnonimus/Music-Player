@@ -1,8 +1,6 @@
 import LeftArrowImg from "./images/player-fast-back.png";
 import RightArrowImg from "./images/player-fast-forward.png";
 import IconStopImg from './images/iconStop.png';
-import RandomTrackImg from './images/shuffle.png';
-import StarImg from './images/star.png';
 import { useRef, useState } from 'react';
 import "./style/controllTrack.scss";
 import IconPlayImg from './images/player-play2.png';
@@ -148,8 +146,6 @@ export default function ControllTrack(props) {
           </div>
           <div className='time'>{secondsToHms(currentTime)}</div>
         </div>
-        <img src={RandomTrackImg}></img>  
-        <img src={StarImg}></img>
         <audio
           ref={audioRef} 
           src={massTrack[Number(numberPlayTrack)][1]} 

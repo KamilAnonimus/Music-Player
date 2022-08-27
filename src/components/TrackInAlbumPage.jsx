@@ -32,7 +32,6 @@ export default function TrackInAlbumPage(props) {
             </div>
             <div className="artistNameTrack">{massAlbumTrack.artist}</div>
             <div className="nameAlbumTrack">{massAlbumTrack.album}</div>
-            <img className="buttonAddPlaylistTrack" src={PlusImg}></img>
             <ControllTrack isPlayingControlTrack={isPlayingControlTrack} massAlbumTrack={massAlbumTrack} massTrack={props.massTrack}/>
         </div>
     )

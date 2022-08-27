@@ -13,12 +13,16 @@
     flex-direction: column;
     .header {
         display: flex;
-        align-items: flex-end;
-        flex-direction: row;
         justify-content: flex-start;
         position: relative;
         left: 49px;
         max-width: 1031px;
+        .back {
+            height: 30px;
+            width: 30px;
+            position: relative;
+            right: 200px;
+        }
         .imgAndName {
             max-width: 347px;
             height: 263px;
@@ -29,9 +33,7 @@
             }
             .nameOnImg {
                 height: 46px;
-                font-size: 40px;
                 position: relative;
-                bottom: 52px;
                 background-color: #0F1E36;
                 display: inline-block;
                 padding: 2px;
@@ -42,18 +44,14 @@
             font-size: 24px;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
             height: 263px;
             justify-content: space-between;
-            padding-left: 50px;
             .headerName {
-                font-size: 48px;
                 margin: 0;
                 position: relative;
             }
 
-            .buttons {   
-                display: flex;
+            .buttons {
                 width: 242px;
                 justify-content: space-between; 
                 %button {
@@ -100,19 +98,6 @@
                 display: flex;
                 width: 1032px;
                 justify-content: space-between;
-                left: 8px;
-                position: relative;
-                .column {
-                    position: relative;
-                    left: 56px;
-                }
-                .number {
-                    position: relative;
-                    left: 80px;
-                }
-                .artist {left: 63px;}
-                .album {left: 71px;}
-                .add {left: 52px;}
             }
             .tracksAlbum {
                 font-size: 18px;
@@ -123,14 +108,10 @@
                 position: relative;
                 padding-top: 57px;
                 justify-content: space-between;
-                .number {
-                    position: relative;
-                    left: 89px;
-                }
                 .imgAndNameTrack {
                     display: flex;
                     align-items: center;
-                    left: 20px;
+                    left: 40px;
                     position: relative;
                     width: 192px;
                     .trackImg {
@@ -148,8 +129,6 @@
                     
                 }
                 .duration {
-                    right: 23px;
-                    position: relative;
                     height: 24px;
                     .label {
                         display: flex;
@@ -208,11 +187,12 @@
                 }
                 .artistNameTrack {
                     width: 115px;
+                    position: relative;
                 }
                 .nameAlbumTrack {
                     width: 70px;
                     position: relative;
-                    right: 20px;
+                    left: 15px;
                 }
                 .buttonAddPlaylistTrack {
                     position: relative;
@@ -221,5 +201,112 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 890px) {
+    .imgAndName {
+        width: 163px;
+        max-height: 183px;
+        .img {
+            max-width: 163px;
+            max-height: 183px;
+        }
+        .nameOnImg {
+            font-size: 24px;
+            bottom: 35px;
+        }
+    }
+    .headerName {
+        font-size: 40px;
+    }
+    .mountArtists, .lenghtTime, .mountSongs {
+        font-size: 18px;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .lenghtTime {display: none;}
+    .informationAlbum {
+        margin-top: 24px;
+        max-height: 116px;
+        align-items: center;
+        .buttons {
+            display: none;
+            opacity: 0;
+            img {
+                display: block;
+            }
+        }
+    }
+
+    .buttonPlayMobile {
+        border: 1px solid #000000;
+        border-radius: 18px;
+        background-color: #76CCFB;
+        width: 22px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .homepageUp {width: 414px;}
+    .columnHeadings {max-width: 414px;}
+    .album, .nameAlbumTrack {display: none;}
+    .containerAlbumPage {
+        align-items: center;
+        .homepage {
+            align-items: center;
+            .homepageDown {width: 414px;}
+        }
+    }
+    .tracksAlbum {
+        width: 414px;
+        .artistNameTrack {
+            left: 45px;
+        }
+    }
+    .duration {
+        left: 30px;
+        position: relative;
+    }
+    .back {
+        display: block;
+    }
+}
+
+@media (min-width: 891px) {
+    .nameOnImg{ 
+        font-size: 40px;
+        bottom: 52px;
+    }
+    .headerName {
+        font-size: 48px;
+    }
+    .header {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    .informationAlbum {
+        align-items: flex-start;
+        padding-left: 50px;
+    }
+    .buttons {
+        display: flex;
+    }
+    .number {
+        position: relative;
+        left: 89px;
+    }
+    .artistNameTrack {
+        left: 10px;
+    }
+    .duration {
+        right: 23px;
+        position: relative;
+    }
+    .back {
+        display: none;
     }
 }

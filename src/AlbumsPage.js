@@ -1,9 +1,10 @@
 import ControllTrack from "./components/ControlTrack";
 import "./components/style/albumsPage.scss";
 import PlayImg from "./components/images/player-play.png";
-import AddImg from "./components/images/player-list-add.png";
 import TrackInAlbumPage from "./components/TrackInAlbumPage";
+import buttonLeftSliderUp from './components/images/chevron-left.png';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 export default function AlbumsPage(props) {
     const massAlbum = props.massAlbum
@@ -23,6 +24,7 @@ export default function AlbumsPage(props) {
     return (
         <div className="containerAlbumPage">
             <div className="header">
+                <Link to="/"><img className='back' src={buttonLeftSliderUp}></img></Link>
                 <div className="imgAndName">
                     <img className="img" src={massAlbum.imgAlbum}></img>
                     <div className="nameOnImg">{massAlbum.nameAlbum}</div>
@@ -34,8 +36,8 @@ export default function AlbumsPage(props) {
                     <div className="lenghtTime">{massAlbum.durationAlbum}</div>
                     <div className="buttons">
                         <div className="buttonPlay" onClick={OnControllTrack}>Play<img src={PlayImg}></img></div>
-                        <div className="buttonSave">Save<img src={AddImg}></img></div>
                     </div>
+                    <img className='buttonPlayMobile' onClick={OnControllTrack}src={PlayImg}></img>
                 </div>
             </div>
             <div className="homepage">
@@ -46,7 +48,6 @@ export default function AlbumsPage(props) {
                         <div className="column time">Duration</div>
                         <div className="column artist">Artist</div>
                         <div className="column album">Album</div>
-                        <div className="column add">Add to playlist</div>
                     </div>
                     {massAlbumTrack.map(massAlbumTrack =>
                     <TrackInAlbumPage massAlbumTrack={massAlbumTrack} massAlbum={massAlbum} key={massAlbumTrack.id} OnControllTrack={OnControllTrack} massTrack={props.massTrack}/>)}

@@ -20,7 +20,7 @@
             width: 72px;
             height: 72px;
             border-radius: 100%;
-            padding-right: 19px;
+            margin-right: 19px;
         }
         .textInformation {
             display: flex;
@@ -29,7 +29,6 @@
             justify-content: space-around;
             .musicName {
             height: 25px;
-            font-size: 20px;
             }
             .avtorNameMusic {font-size: 14px;}
         }
@@ -75,5 +74,40 @@
             font-size: 10px;
             color: #FFFFFF;
         }
+    }
+}
+
+@media (max-width: 890px) {
+    .controlMusicPanel {
+        max-height: 59px;
+        align-items: flex-end;
+        max-width: 441px;
+        .informationMusic {
+            max-height: 59px;
+            .avatar {
+                max-width: 56px;
+                max-height: 56px;
+            }
+            .musicName {
+                font-size: 12px;
+            }
+            .avtorNameMusic {display: none;}
+        }
+        .control {
+            img {
+                max-width: 14px;
+                height: 14px;
+            }
+            .slider {max-width: 203px;}
+            input {
+                max-width: 163px;
+            }
+        }
+    }
+}
+
+@media (min-width: 891px) { 
+    .musicName {
+        font-size: 20px;
     }
 }
