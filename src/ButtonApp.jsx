@@ -4,7 +4,7 @@ import { useState } from "react";
 import Trending from "./components/Trending";
 import Featured from "./components/Featured";
 import NewReleases from "./components/NewReleases";
-import Genres from "./components/Genres";
+import Genres from "./components/Classic";
 import MostPlayed from "./components/MostPlayed";
 import Homepage from "./Homepage";
 import AlbumsPage from "./AlbumsPage";
@@ -45,6 +45,17 @@ import MiyaGiAndyPandaAlbumTrackImg5 from './components/Music albums/MiyaGi & An
 import MiyaGiAndyPandaAlbumTrackImg6 from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Мало Нам/maxresdefault.jpg';
 import MiyaGiAndyPandaAlbumTrackImg7 from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Психопатия/maxresdefault (1).jpg';
 import MiyaGiAndyPandaAlbumTrackImg8 from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Там Ревели Горы/maxresdefault.jpg';
+import ClassicAlbumImg from './components/Music albums/Classic/klassicheskaya-muzyika.webp';
+import ClassicAlbumTrackImg1 from './components/Music albums/Classic/01-Mihail_Oginskiy-Polonez/Без названия.jpeg';
+import ClassicAlbumTrackImg2 from './components/Music albums/Classic/02-Nino_Rota-Theme_of_love_Romeo_and_Julieta/281136_big.jpg';
+import ClassicAlbumTrackImg3 from './components/Music albums/Classic/03-Hans_Gunter_Wagener-Sommernachtstraum/400x400bb.jpg';
+import ClassicAlbumTrackImg4 from './components/Music albums/Classic/04-Dmitry_Krasnouhov-Detskaya_ulybka/mqdefault.jpg';
+import ClassicAlbumTrackImg5 from './components/Music albums/Classic/05-Robert_Shuman-Scenes_of_Childhood_Dreaming/cb67bd-20180126-daily-download-05.jpg';
+import ClassicAlbumTrackImg6 from './components/Music albums/Classic/06-Ruslan_Muratov-Fonariki/337068_big.jpg';
+import ClassicAlbumTrackImg7 from './components/Music albums/Classic/08-Hans_Zimmer-503/e8b0f5c5643866f721bf2ef7813b23f0.1000x1000x1.jpg';
+import ClassicAlbumTrackImg8 from './components/Music albums/Classic/09-Petr_Chaykovsky-Elovy_les_zimoy/hqdefault.jpg';
+import ClassicAlbumTrackImg9 from './components/Music albums/Classic/10-Vitaly_Sumarokov-O-ney/Без названия.jpeg';
+import ClassicAlbumTrackImg10 from './components/Music albums/Classic/11-Philip_Glass-Secret_agent/414ZP423smL.jpg';
 import MiyaGiAndyPandaAlbumTrackImg9 from './components/Music albums/MiyaGi & Andy Panda/MiyaGi feat. Andy Panda - Utopia/ab67616d0000b2739524ceed456af9f753f75dd8.jpeg';
 import BandanAlbumTrackProblemsAudio from './components/Music albums/Bandana/Big Baby Tape kizaru - 99 Problems/Big Baby Tape kizaru - 99 Problems-music-2021.ru.mp3';
 import BandanAlbumTrackAndrewStoryAudio from './components/Music albums/Bandana/Big Baby Tape kizaru - Andrew Story/Big Baby Tape kizaru - Andrew Story-music-2021.ru.mp3';
@@ -81,6 +92,16 @@ import MiyaGiAndyPandaAlbumTrackМалоНамAudio from './components/Music alb
 import MiyaGiAndyPandaAlbumTrackПсихопатияAudio from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Психопатия/MiyaGi & Andy Panda - Психопатия.mp3'
 import MiyaGiAndyPandaAlbumTrackТамРевелиГорыAudio from './components/Music albums/MiyaGi & Andy Panda/MiyaGi & Andy Panda - Там Ревели Горы/MiyaGi & Andy Panda - Там Ревели Горы.mp3'
 import MiyaGiAndyPandaAlbumTrackUtopiaAudio from './components/Music albums/MiyaGi & Andy Panda/MiyaGi feat. Andy Panda - Utopia/MiyaGi feat. Andy Panda - Utopia.mp3'
+import ClassicAlbumTrackMihail_OginskiyPolonezAudio from './components/Music albums/Classic/01-Mihail_Oginskiy-Polonez/01-Mihail_Oginskiy-Polonez.mp3';
+import ClassicAlbumTrackNinoRotaAudio from './components/Music albums/Classic/02-Nino_Rota-Theme_of_love_Romeo_and_Julieta/02-Nino_Rota-Theme_of_love_Romeo_and_Julieta.mp3';
+import ClassicAlbumTrackWagenerSommernachtstraumAudio from './components/Music albums/Classic/03-Hans_Gunter_Wagener-Sommernachtstraum/03-Hans_Gunter_Wagener-Sommernachtstraum.mp3';
+import ClassicAlbumTrackДетскаулыбкаAudio from './components/Music albums/Classic/04-Dmitry_Krasnouhov-Detskaya_ulybka/04-Dmitry_Krasnouhov-Detskaya_ulybka.mp3';
+import ClassicAlbumTrackScenes_of_Childhood_DreamingAudio from './components/Music albums/Classic/05-Robert_Shuman-Scenes_of_Childhood_Dreaming/05-Robert_Shuman-Scenes_of_Childhood_Dreaming.mp3';
+import ClassicAlbumTrackFonarikiAudio from './components/Music albums/Classic/06-Ruslan_Muratov-Fonariki/06-Ruslan_Muratov-Fonariki.mp3';
+import ClassicAlbumTrackElovyleszimoyAudio from './components/Music albums/Classic/08-Hans_Zimmer-503/08-Hans_Zimmer-503.mp3';
+import ClassicAlbumTrack09Petr_ChaykovskyElovy_les_zimoyAudio from './components/Music albums/Classic/09-Petr_Chaykovsky-Elovy_les_zimoy/09-Petr_Chaykovsky-Elovy_les_zimoy.mp3';
+import ClassicAlbumTrackOneyAudio from './components/Music albums/Classic/10-Vitaly_Sumarokov-O-ney/10-Vitaly_Sumarokov-O-ney.mp3'
+import ClassicAlbumTrackSecretagentAudio from './components/Music albums/Classic/11-Philip_Glass-Secret_agent/11-Philip_Glass-Secret_agent.mp3';
 
 export default function ButtonApp() {
   const massAlbum = []
@@ -154,6 +175,27 @@ export default function ButtonApp() {
     {id:9, imgTrack:MiyaGiAndyPandaAlbumTrackImg9, name:"Utopia", durationTrack:"3:29", artist:"MiyaGi & Andy Panda", album:"Yamakasi"}
   ])
 
+  massAlbum[4] = {
+    imgAlbum:ClassicAlbumImg,
+    nameAlbum:"Classic",
+    nameArtist:"-",
+    numberOfArtists:"-",
+    numberOfTracks:"10",
+    durationAlbum:"~30mins"
+  }
+  const [massAlbumTrack3] = useState([
+    {id:1, imgTrack:ClassicAlbumTrackImg1, name:"Mihail_Oginskiy-Polonez", durationTrack:"2:36", artist:"Polonez", album:"Yamakasi"},
+    {id:2, imgTrack:ClassicAlbumTrackImg2, name:"Nino_Rota", durationTrack:"2:08", artist:"-", album:"Classic"},
+    {id:3, imgTrack:ClassicAlbumTrackImg3, name:"Wagener-Sommernachtstraum", durationTrack:"3:10", artist:"Hans_Gunter", album:"Classic"},
+    {id:4, imgTrack:ClassicAlbumTrackImg4, name:"Детска улыбка", durationTrack:"4:10", artist:"Dmitry_Krasnouhov", album:"Classic"},
+    {id:5, imgTrack:ClassicAlbumTrackImg5, name:"Scenes_of_Childhood_Dreaming", durationTrack:"2:24", artist:"Robert_Shuman", album:"Classic"},
+    {id:6, imgTrack:ClassicAlbumTrackImg6, name:"Fonariki", durationTrack:"2:14", artist:"Руслан Маратов", album:"Classic"},
+    {id:7, imgTrack:ClassicAlbumTrackImg7, name:"-", durationTrack:"2:15", artist:"Hans_Zimmer", album:"Classic"},
+    {id:8, imgTrack:ClassicAlbumTrackImg8, name:"Elovy_les_zimoy", durationTrack:"4:42", artist:"Чайковский", album:"Classic"},
+    {id:9, imgTrack:ClassicAlbumTrackImg9, name:"O-ney", durationTrack:"3:26", artist:"Vitaly_Sumarokov", album:"Classic"},
+    {id:10, imgTrack:ClassicAlbumTrackImg10, name:"Secret_agent", durationTrack:"5:17", artist:"Philip_Glass", album:"Classic"}
+  ])
+
   const massTrack = [
     [
       [0, BandanAlbumTrackProblemsAudio, BandanAlbumTrackImg1, "99 Problems", "Big Baby Tape"],
@@ -198,8 +240,36 @@ export default function ButtonApp() {
       [7, MiyaGiAndyPandaAlbumTrackПсихопатияAudio, MiyaGiAndyPandaAlbumTrackImg7, "Психопатия", "MiyaGi & Andy Panda"],
       [8, MiyaGiAndyPandaAlbumTrackТамРевелиГорыAudio, MiyaGiAndyPandaAlbumTrackImg8, "Тамревелигоры", "MiyaGi & Andy Panda"],
       [9, MiyaGiAndyPandaAlbumTrackUtopiaAudio, MiyaGiAndyPandaAlbumTrackImg9, "Utopia", "MiyaGi & Andy Panda"]
+    ],
+    [
+      [0, ClassicAlbumTrackMihail_OginskiyPolonezAudio, ClassicAlbumTrackImg1, "Mihail_Oginskiy-Polonez", "Polonez"],
+      [1, ClassicAlbumTrackMihail_OginskiyPolonezAudio, ClassicAlbumTrackImg1, "Mihail_Oginskiy-Polonez", "Polonez"],
+      [2, ClassicAlbumTrackNinoRotaAudio, ClassicAlbumTrackImg2, "Nino_Rota", "-"],
+      [3, ClassicAlbumTrackWagenerSommernachtstraumAudio, ClassicAlbumTrackImg3, "Wagener-Sommernachtstraum", "Hans_Gunter"],
+      [4, ClassicAlbumTrackДетскаулыбкаAudio, ClassicAlbumTrackImg4, "Детска улыбка", "Dmitry_Krasnouhov"],
+      [5, ClassicAlbumTrackScenes_of_Childhood_DreamingAudio, ClassicAlbumTrackImg5, "Scenes_of_Childhood_Dreaming", "Robert_Shuman"],
+      [6, ClassicAlbumTrackFonarikiAudio, ClassicAlbumTrackImg6, "Fonariki", "Руслан Маратов"],
+      [7, ClassicAlbumTrackElovyleszimoyAudio, ClassicAlbumTrackImg7, "-", "Hans_Zimmer"],
+      [8, ClassicAlbumTrack09Petr_ChaykovskyElovy_les_zimoyAudio, ClassicAlbumTrackImg8, "Elovy_les_zimoy", "Чайковский"],
+      [9, ClassicAlbumTrackOneyAudio, ClassicAlbumTrackImg9, "O-ney", "Vitaly_Sumarokov"],
+      [10, ClassicAlbumTrackSecretagentAudio, ClassicAlbumTrackImg10, "Secret_agent", "Philip_Glass"]
+    ],
+    [
+      [0, BandanAlbumTrackErrbodySleepingAudio, BandanAlbumTrackImg8 ,"Errbody Sleepin", "-"],
+      [1, BandanAlbumTrackErrbodySleepingAudio, BandanAlbumTrackImg8 ,"Errbody Sleepin", "-"],
+      [3, MiyaGiAndyPandaAlbumTrackМалоНамAudio, MiyaGiAndyPandaAlbumTrackImg6, "Малонам", "MiyaGi & Andy Panda"],
+      [4, MiyaGiAndyPandaAlbumTrackПсихопатияAudio, MiyaGiAndyPandaAlbumTrackImg7, "Психопатия", "MiyaGi & Andy Panda"],
+      [5, ClassicAlbumTrackSecretagentAudio, ClassicAlbumTrackImg10, "Secret_agent", "Philip_Glass"],
+      [6, MillionDollarBusinessAlbumЯНаТаблахAudio, MillionDollarBusinessAlbumTrackImg13, "Я на таблах", "Алишер Моргенштерн & Александр Запорожец"],
+      [7, ClassicAlbumTrackNinoRotaAudio, ClassicAlbumTrackImg2, "Nino_Rota", "-"],
+      [8, ClassicAlbumTrackWagenerSommernachtstraumAudio, ClassicAlbumTrackImg3, "Wagener-Sommernachtstraum", "Hans_Gunter"],
+      [9, BandanAlbumTrackAndrewStoryAudio, BandanAlbumTrackImg2 ,"Andrew Story", "Big Baby Tape"],
+      [10, BandanAlbumTrackBandanaAudio, BandanAlbumTrackImg3 ,"Bandana", "Montana"],
+      [11, MillionDollarBusinessAlbumGTAAudio, MillionDollarBusinessAlbumTrackImg3, "GTA", "Алишер Моргенштерн & Руслан Валеев"],
+      [12, ClassicAlbumTrackMihail_OginskiyPolonezAudio, ClassicAlbumTrackImg1, "Mihail_Oginskiy-Polonez", "Polonez"]
     ]
   ]
+
   const [State, setState] = useState()
   function colorButtons(name) {
     setState({name})
@@ -207,12 +277,12 @@ export default function ButtonApp() {
   return (
     <Routes>
         <Route path="/" element={<Homepage nameButton={State}/>} >
-          <Route index element={<All colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
-          <Route path="/trending" element={<Trending colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
-          <Route path="/featured" element={<Featured colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
-          <Route path="/newreleases" element={<NewReleases colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2}/>} />
-          <Route path="/genres" element={<Genres/>} />
-          <Route path="/mostPlayed" element={<MostPlayed/>} />
+          <Route index element={<All colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2} massAlbumTrack3={massAlbumTrack3}/>} />
+          <Route path="/trending" element={<Trending colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0}/>} />
+          <Route path="/featured" element={<Featured colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0}/>} />
+          <Route path="/newreleases" element={<NewReleases colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0}/>} />
+          <Route path="/classic" element={<Genres colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0}/>}/>
+          <Route path="/mostPlayed" element={<MostPlayed  colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0}/>} />
         </Route>
       <Route>              
         <Route index element={<All />}></Route>
@@ -220,6 +290,7 @@ export default function ButtonApp() {
         <Route path="/bandana" element={<AlbumsPage massAlbum={massAlbum[1]} massAlbumTrack={massAlbumTrack0} massTrack={massTrack[0]}/>}></Route>
         <Route path="/millionDollar" element={<AlbumsPage massAlbum={massAlbum[2]} massAlbumTrack={massAlbumTrack1} massTrack={massTrack[1]}/>}></Route>
         <Route path="/yamakasi" element={<AlbumsPage massAlbum={massAlbum[3]} massAlbumTrack={massAlbumTrack2} massTrack={massTrack[2]}/>}></Route>
+        <Route path="/classic" element={<AlbumsPage massAlbum={massAlbum[4]} massAlbumTrack={massAlbumTrack3} massTrack={massTrack[3]}/>}></Route>
       </Route>
     </Routes>
   );

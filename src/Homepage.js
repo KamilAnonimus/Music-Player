@@ -16,7 +16,7 @@ function Homepage(props) {
         if(nameButton === 'trending') {document.getElementById('trending').style.color = '#FFFFFF'} else {document.getElementById('trending').style.color = '#76CCFB'}
         if(nameButton === 'featured') {document.getElementById('featured').style.color = '#FFFFFF'} else {document.getElementById('featured').style.color = '#76CCFB'}
         if(nameButton === 'newreleases') {document.getElementById('newreleases').style.color = '#FFFFFF'} else {document.getElementById('newreleases').style.color = '#76CCFB'}
-        if(nameButton === 'genres') {document.getElementById('genres').style.color = '#FFFFFF'} else {document.getElementById('genres').style.color = '#76CCFB'}
+        if(nameButton === 'classic') {document.getElementById('classic').style.color = '#FFFFFF'} else {document.getElementById('classic').style.color = '#76CCFB'}
         if(nameButton === 'mostPlayed') {document.getElementById('mostPlayed').style.color = '#FFFFFF'} else {document.getElementById('mostPlayed').style.color = '#76CCFB'}
       }, 10)
     }
@@ -32,7 +32,7 @@ function Homepage(props) {
                 <Link style={{ textDecoration: 'none', color: "#76CCFB" }} className='buttons' id={'trending'} to="/trending" onClick={() => {nameButton = 'trending'; colorButton()}}>Trending</Link>
                 <Link style={{ textDecoration: 'none', color: "#76CCFB" }} className='buttons' id={'featured'} to="/featured" onClick={() => {nameButton = 'featured'; colorButton()}}>Featured</Link>
                 <Link style={{ textDecoration: 'none', color: "#76CCFB" }} className='buttons' id={'newreleases'} to="/newreleases" onClick={() => {nameButton = 'newreleases'; colorButton()}}>New Releases</Link>
-                <Link style={{ textDecoration: 'none', color: "#76CCFB" }} className='buttons' id={'genres'} to="/genres" onClick={() => {nameButton = 'genres'; colorButton()}}>Genres</Link>
+                <Link style={{ textDecoration: 'none', color: "#76CCFB" }} className='buttons' id={'classic'} to="/classic" onClick={() => {nameButton = 'classic'; colorButton()}}>Classic</Link>
                 <Link style={{ textDecoration: 'none', color: "#76CCFB" }} className='buttons' id={'mostPlayed'} to="/mostPlayed" onClick={() => {nameButton = 'mostPlayed'; colorButton()}}>Most Played</Link>
               </div>
               <div className='sliderDown'>

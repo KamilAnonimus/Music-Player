@@ -35,12 +35,15 @@ class sliderDown extends Component {
     massAlbumTrack[0] = this.props.massAlbumTrack0
     massAlbumTrack[1] = this.props.massAlbumTrack1
     massAlbumTrack[2] = this.props.massAlbumTrack2
+    massAlbumTrack[3] = this.props.massAlbumTrack3
     let massTrack0 = this.props.massTrackIndex
     delete massTrack0[0]
     let massTrack1 = this.props.massTrack[1]
     delete massTrack1[0]
     let massTrack2 = this.props.massTrack[2]
     delete massTrack2[0]
+    let massTrack3 = this.props.massTrack[3]
+    delete massTrack3[0]
     const style = { transform: this.state.style };
     let numberAlbum = Number(localStorage.getItem(('idAlbum')))
     let numberPlayTrack = localStorage.getItem('idTrack')
@@ -96,6 +99,19 @@ class sliderDown extends Component {
                         }}>     <img src={`${massTrack2[2]}`}/>
                                 <div className="nameTrack">{massTrack2[3]}</div>
                                 <div className="nameArtists">{massTrack2[4]}</div>
+                            </a>
+                        </li>
+                    )}
+                    {massTrack3.map(massTrack3 =>
+                       <li key={massTrack3[0]}><a className="buttomSliderDown" style={{display: `${this.props.VisibilityOfExtraTracks ? 'flex' : 'none'}`}} onClick={() => {
+                        if(localStorage.length < 2) {
+                            localStorage.setItem('controllMusicTrack', 'HomePage');
+                            localStorage.setItem('idTrack',`${massTrack3[0]}`);
+                            localStorage.setItem('idAlbum', 3)
+                        }
+                        }}>     <img src={`${massTrack3[2]}`}/>
+                                <div className="nameTrack">{massTrack3[3]}</div>
+                                <div className="nameArtists">{massTrack3[4]}</div>
                             </a>
                         </li>
                     )}

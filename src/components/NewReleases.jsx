@@ -5,8 +5,6 @@ export default function NewReleases(props) {
     const massTrack = props.massTrack
     const massAlbum = props.massAlbum
     const massAlbumTrack0 = props.massAlbumTrack0
-    const massAlbumTrack1 = props.massAlbumTrack1
-    const massAlbumTrack2 = props.massAlbumTrack2
     const [VisibilityOfExtraTracks, setVisibilityOfExtraTracks] = useState(false)
 
     localStorage.clear()
@@ -16,7 +14,7 @@ export default function NewReleases(props) {
       }, []);
     return(
         <div className="newReleasesDownSlider">
-            <SliderDown VisibilityOfExtraTracks={VisibilityOfExtraTracks} massTrackIndex={props.massTrack[2]} massTrack={massTrack} massAlbum={massAlbum} massAlbumTrack1={massAlbumTrack1} massAlbumTrack0={massAlbumTrack0} massAlbumTrack2={massAlbumTrack2}/>
+            <SliderDown VisibilityOfExtraTracks={VisibilityOfExtraTracks} massTrackIndex={props.massTrack[2]} massTrack={massTrack} massAlbum={massAlbum} massAlbumTrack0={massAlbumTrack0}/>
         </div>
     );
 }

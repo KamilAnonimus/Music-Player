@@ -3,6 +3,7 @@ import './style/homepage.scss';
 import png1UpSlider from './Music albums/Bandana/Bandana_I.jpg';
 import png2UpSlider from './Music albums/Million Dollar: Business/mqdefault.jpg';
 import png3UpSlider from './Music albums/MiyaGi & Andy Panda/miyagi-andy-panda-yamakasi.jpg';
+import png4UpSlider from './/Music albums/Classic/klassicheskaya-muzyika.webp'
 import buttonLeftSliderUp from './images/chevron-left.png';
 import buttonRightSliderUp from './images/chevron-right.png';
 import { Link } from 'react-router-dom';
@@ -58,6 +59,7 @@ class sliderUp extends Component {
                         <li><Link className="linkSliderUp" to={"/bandana"}><img src={png1UpSlider}/></Link></li>
                         <li><Link className="linkSliderUp" to={"/millionDollar"}><img src={png2UpSlider}/></Link></li>
                         <li><Link className="linkSliderUp" to={"/yamakasi"}><img src={png3UpSlider}/></Link></li>
+                        <li><Link className="linkSliderUp" to={"/classic"}><img src={png4UpSlider}/></Link></li>
                     </ul>
                 </div>
                 <div className="ButtonControls">
