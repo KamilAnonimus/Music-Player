@@ -5,6 +5,7 @@ export default function Featured(props) {
     const massTrack = props.massTrack
     const massAlbum = props.massAlbum
     const massAlbumTrack0 = props.massAlbumTrack0
+    const maxPositionSlider = -1025
     const [VisibilityOfExtraTracks, setVisibilityOfExtraTracks] = useState(false)
 
     localStorage.clear()
@@ -14,7 +15,7 @@ export default function Featured(props) {
       }, []);
     return (
         <div className="feturedDownSlider">
-            <SliderDown VisibilityOfExtraTracks={VisibilityOfExtraTracks} massTrackIndex={props.massTrack[0]} massTrack={massTrack} massAlbum={massAlbum} massAlbumTrack0={massAlbumTrack0}/>
+            <SliderDown maxPositionSlider={maxPositionSlider} VisibilityOfExtraTracks={VisibilityOfExtraTracks} massTrackIndex={props.massTrack[0]} massTrack={massTrack} massAlbum={massAlbum} massAlbumTrack0={massAlbumTrack0}/>
         </div>
     );
 }

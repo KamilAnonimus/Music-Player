@@ -16,9 +16,11 @@ class sliderDown extends Component {
       }
 
     SwipePositionTrack(e) {
-        mouseup = window.event.clientX;
-        positionXSliderUpTrack += mouseup - mousedown;
-        this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
+        if(positionXSliderUpTrack > this.props.maxPositionSlider && positionXSliderUpTrack < 1) {
+            mouseup = window.event.clientX;
+            positionXSliderUpTrack += mouseup - mousedown;
+            this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
+        }
     }
 
     OnTouchStartPosition(e) {
@@ -57,6 +59,15 @@ class sliderDown extends Component {
         localStorage.setItem('idAlbum', numberAlbum -= 1)
         localStorage.setItem('idTrack', Number(massAlbumTrack[numberAlbum].length))
         localStorage.removeItem('StartOfAlbumTrack');
+    }
+
+    if (positionXSliderUpTrack > 0) {
+        positionXSliderUpTrack = Number(-1)
+        this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` })
+    }
+    if (positionXSliderUpTrack < this.props.maxPositionSlider) {
+        positionXSliderUpTrack = Number(this.props.maxPositionSlider + 1)
+        this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
     }
         return (
             <div className="wrapper">

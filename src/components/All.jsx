@@ -8,6 +8,7 @@ export default function All(props) {
   const massAlbumTrack1 = props.massAlbumTrack1
   const massAlbumTrack2 = props.massAlbumTrack2
   const massAlbumTrack3 = props.massAlbumTrack3
+  const maxPositionSlider = -5823
   const [VisibilityOfExtraTracks, setVisibilityOfExtraTracks] = useState(true)
 
   localStorage.clear()
@@ -17,7 +18,7 @@ export default function All(props) {
   }, []);
     return (
       <div className='allDownSlider'>
-        <SliderDown massTrackIndex={props.massTrack[0]} VisibilityOfExtraTracks={VisibilityOfExtraTracks} massTrack={massTrack} massAlbum={massAlbum} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2} massAlbumTrack3={massAlbumTrack3}/>
+        <SliderDown maxPositionSlider={maxPositionSlider} massTrackIndex={props.massTrack[0]} VisibilityOfExtraTracks={VisibilityOfExtraTracks} massTrack={massTrack} massAlbum={massAlbum} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2} massAlbumTrack3={massAlbumTrack3}/>
       </div>
     );
   }

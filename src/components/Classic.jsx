@@ -5,6 +5,7 @@ export default function Classic(props) {
     const massTrack = props.massTrack
     const massAlbum = props.massAlbum
     const massAlbumTrack0 = props.massAlbumTrack0
+    const maxPositionSlider = -575
     const [VisibilityOfExtraTracks, setVisibilityOfExtraTracks] = useState(false)
 
     localStorage.clear()
@@ -14,7 +15,7 @@ export default function Classic(props) {
       }, []);
     return(
         <div className="genresDownSlider">
-            <SliderDown VisibilityOfExtraTracks={VisibilityOfExtraTracks} massTrackIndex={props.massTrack[3]} massTrack={massTrack} massAlbum={massAlbum} massAlbumTrack0={massAlbumTrack0}/>
+            <SliderDown maxPositionSlider={maxPositionSlider} VisibilityOfExtraTracks={VisibilityOfExtraTracks} massTrackIndex={props.massTrack[3]} massTrack={massTrack} massAlbum={massAlbum} massAlbumTrack0={massAlbumTrack0}/>
         </div>
     );
 }

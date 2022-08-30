@@ -25,19 +25,25 @@ class sliderUp extends Component {
       }
 
     LeftPositionTrack(e) {
-        positionXSliderUpTrack -= 300
-        this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
+        if(positionXSliderUpTrack > -600) {
+            positionXSliderUpTrack -= 300
+            this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
+        }
     }
 
     RightPositionTrack(e) {
-        positionXSliderUpTrack += 300
-        this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
+        if(positionXSliderUpTrack < 0) {
+            positionXSliderUpTrack += 300
+            this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
+        }
     }
 
     SwipePositionTrack(e) {
-        mouseup = window.event.clientX;
-        positionXSliderUpTrack += mouseup - mousedown;
-        this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
+        if(positionXSliderUpTrack > -600 && positionXSliderUpTrack < 1) {
+            mouseup = window.event.clientX;
+            positionXSliderUpTrack += mouseup - mousedown;
+            this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
+        }
     }
 
     OnTouchStartPosition(e) {
@@ -49,7 +55,17 @@ class sliderUp extends Component {
         positionXSliderUpTrack += touchdown - touchup
         this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
     }
+    
+
     render () {
+        if (positionXSliderUpTrack < -600) {
+            positionXSliderUpTrack = Number(-590)
+            this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` });
+        }
+        if (positionXSliderUpTrack > 0) {
+            positionXSliderUpTrack = Number(-1)
+            this.setState({ style: `translate3d(${positionXSliderUpTrack}px, 0px, 0px)` })
+        }
         const style = { transform: this.state.style };
         return (
         <div className='sliderUp'>
