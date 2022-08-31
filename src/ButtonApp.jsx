@@ -290,7 +290,7 @@ export default function ButtonApp() {
         <Route path="/bandana" element={<AlbumsPage massAlbum={massAlbum[1]} massAlbumTrack={massAlbumTrack0} massTrack={massTrack[0]}/>}></Route>
         <Route path="/millionDollar" element={<AlbumsPage massAlbum={massAlbum[2]} massAlbumTrack={massAlbumTrack1} massTrack={massTrack[1]}/>}></Route>
         <Route path="/yamakasi" element={<AlbumsPage massAlbum={massAlbum[3]} massAlbumTrack={massAlbumTrack2} massTrack={massTrack[2]}/>}></Route>
-        <Route path="/classic" element={<AlbumsPage massAlbum={massAlbum[4]} massAlbumTrack={massAlbumTrack3} massTrack={massTrack[3]}/>}></Route>
+        <Route path="/classicAlbum" element={<AlbumsPage massAlbum={massAlbum[4]} massAlbumTrack={massAlbumTrack3} massTrack={massTrack[3]}/>}></Route>
       </Route>
     </Routes>
   );

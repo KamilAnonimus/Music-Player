@@ -75,7 +75,7 @@ class sliderUp extends Component {
                         <li><Link className="linkSliderUp" to={"/bandana"}><img src={png1UpSlider}/></Link></li>
                         <li><Link className="linkSliderUp" to={"/millionDollar"}><img src={png2UpSlider}/></Link></li>
                         <li><Link className="linkSliderUp" to={"/yamakasi"}><img src={png3UpSlider}/></Link></li>
-                        <li><Link className="linkSliderUp" to={"/classic"}><img src={png4UpSlider}/></Link></li>
+                        <li><Link className="linkSliderUp" to={"/classicAlbum"}><img src={png4UpSlider}/></Link></li>
                     </ul>
                 </div>
                 <div className="ButtonControls">
