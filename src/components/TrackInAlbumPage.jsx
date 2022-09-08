@@ -1,28 +1,27 @@
-import PlusImg from "./images/plus.png";
 import { useState } from 'react';
 import ControllTrack from "./ControlTrack";
 
 export default function TrackInAlbumPage(props) {
-    const massAlbumTrack = props.massAlbumTrack
+    const [OnControllTracks, setOnControllTracks] = useState(false)
+    const listAlbumTrack = props.listAlbumTrack
     const [isPlayingControlTrack, setIsPlayingControlTrack] = useState(false)
 
-
     const OnControllTrack = () => {
-        if(!isPlayingControlTrack && localStorage.length < 2) {
-            localStorage.setItem('controllMusicTrack', 'on');
-            localStorage.setItem('idTrack',`${massAlbumTrack.id}`)
+        if(!props.State) {
+            setOnControllTracks(true)
             setIsPlayingControlTrack(true)
+            props.OnControllTrackState(true)
         }
     }
     return (
         <div className="tracksAlbum" onClick={OnControllTrack}>
-            <div className="number">{massAlbumTrack.id}</div>
+            <div className="number">{listAlbumTrack.id}</div>
             <div className="imgAndNameTrack">
-                <img className="trackImg" src={massAlbumTrack.imgTrack}></img>
-                <div className="trackName">{massAlbumTrack.name}</div>   
+                <img className="trackImg" src={listAlbumTrack.imgTrack}></img>
+                <div className="trackName">{listAlbumTrack.name}</div>   
             </div>
-            <div className="duration">{massAlbumTrack.durationTrack}
-                <div className='label' id={massAlbumTrack.id}>
+            <div className="duration">{listAlbumTrack.durationTrack}
+                <div className='label' id={listAlbumTrack.id}>
                     <div className="component label1"></div>
                     <div className="component label2"></div>
                     <div className="component label3"></div>
@@ -30,9 +29,9 @@ export default function TrackInAlbumPage(props) {
                     <div className="component label5"></div>
                 </div>
             </div>
-            <div className="artistNameTrack">{massAlbumTrack.artist}</div>
-            <div className="nameAlbumTrack">{massAlbumTrack.album}</div>
-            <ControllTrack isPlayingControlTrack={isPlayingControlTrack} massAlbumTrack={massAlbumTrack} massTrack={props.massTrack}/>
+            <div className="artistNameTrack">{listAlbumTrack.artist}</div>
+            <div className="nameAlbumTrack">{listAlbumTrack.album}</div>
+            <ControllTrack isPlayingControlTrack={isPlayingControlTrack} OnControllTrack={OnControllTracks} listAlbumTrack={listAlbumTrack} listTrack={props.listTrack}/>
         </div>
     )
 }

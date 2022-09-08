@@ -4,6 +4,7 @@ import IconStopImg from './images/iconStop.png';
 import { useRef, useState } from 'react';
 import "./style/controllTrack.scss";
 import IconPlayImg from './images/player-play2.png';
+import { useEffect } from "react";
 
 export default function ControllTrack(props) {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -12,16 +13,16 @@ export default function ControllTrack(props) {
   const [currentTime, setCurrentTime] = useState(0)
   const [percentage, setPercentage] = useState(0)
   const [duration, setDuration] = useState(0)
+  const [numberPlayTrack, setnumberPlayTrack] = useState(1)
   const isPlayingControlTrack = props.isPlayingControlTrack
-  const massAlbumTrack = props.massAlbumTrack
-  const massTrack = props.massTrack
+  const listAlbumTrack = props.listAlbumTrack
+  const listTrack = props.listTrack
   let display = 'none'
-  if (localStorage.getItem('controllMusicTrack')) {display = 'flex'}
+  if (props.OnControllTrack) {display = 'flex'}
   let width = '1042px'
   let marginLeft = "50px"
   let opacityAvtorNameMusic = '100'
-  if (localStorage.getItem('controllMusicTrack') === 'HomePage') { width = '887px'; marginLeft = "0px"; opacityAvtorNameMusic = '0' }
-  let numberPlayTrack = localStorage.getItem('idTrack')
+  if (props.page !== undefined) { width = '887px'; marginLeft = "0px"; opacityAvtorNameMusic = '0' }
   var label = document.getElementById(numberPlayTrack);
 
   const audioRef = useRef()
@@ -82,28 +83,32 @@ export default function ControllTrack(props) {
     }
   }
 
-  if (isPlayingControlTrack) { 
-    display = 'flex'
-    localStorage.setItem('controllMusicTrack', 'on');
-    localStorage.setItem('idTrack', `${massAlbumTrack.id}`);
+  useEffect(() => {
+  if(listAlbumTrack.id > listTrack.length - 1) {
+    display = 'none';
+    setnumberPlayTrack(1)
   }
-
+  if (isPlayingControlTrack) { 
+        display = 'flex'
+        setnumberPlayTrack(listAlbumTrack.id);
+    }
+  }, [isPlayingControlTrack])
+ 
   function nextTrack() {
     setAutoPlay(true)
-    if (numberPlayTrack < massTrack.length - 1) {
+    if (numberPlayTrack < listTrack.length - 1) {
       setIsPlaying(true)
-      if(localStorage.getItem('controllMusicTrack') === "HomePage") {
-        localStorage.setItem('idTrack', Number(numberPlayTrack) + Number(1))
+      if(props.page !== undefined) {
+        setnumberPlayTrack(Number(numberPlayTrack) + Number(1))
         setIsPlaying(true)
       } else {
-        localStorage.setItem('idTrack',`${massAlbumTrack.id+=1}`)
+        setnumberPlayTrack(`${listAlbumTrack.id+=1}`)
       }
-      label = document.getElementById(`${localStorage.getItem("idTrack")}`);
+      label = document.getElementById(`${listAlbumTrack.id}`);
       label.style.display = 'flex';
-      label = document.getElementById(`${localStorage.getItem("idTrack")}`- 1);
+      label = document.getElementById(`${listAlbumTrack.id}`- 1);
       label.style.display = 'none';
     } else {
-      localStorage.setItem('EndOfAlbumTrack', true)
       setIsPlaying(true)
     }
   }
@@ -112,27 +117,29 @@ export default function ControllTrack(props) {
     setAutoPlay(true)
     if (numberPlayTrack > 1) {
       setIsPlaying(true)
-      if(localStorage.getItem('controllMusicTrack') === "HomePage") {
-        localStorage.setItem('idTrack', Number(numberPlayTrack - 1))
+      if(props.page !== undefined) {
+        setnumberPlayTrack(Number(numberPlayTrack - 1))
       } else {
-        localStorage.setItem('idTrack',Number(`${massAlbumTrack.id-=1}`))
+        setnumberPlayTrack(Number(`${listAlbumTrack.id-=1}`))
       }
-      label = document.getElementById(`${localStorage.getItem("idTrack")}`);
+      label = document.getElementById(`${listAlbumTrack.id}`);
       label.style.display = 'flex';
-      label = document.getElementById(`${numberPlayTrack}`);
+      label = document.getElementById(Number(`${listAlbumTrack.id}`)+ Number(1));
       label.style.display = 'none';
     } else {
-      localStorage.setItem('StartOfAlbumTrack', true)
       setIsPlaying(true)
+      if (props.numberAlbum > 0) {
+        setnumberPlayTrack(listTrack.length - 1)
+      }
     }
   }
   return (
     <div className='controlMusicPanel' style={{ display: `${display}`, width: `${width}`, marginLeft: `${marginLeft}`}}>
       <div className='informationMusic'>
-        <img className='avatar' src={massTrack[Number(numberPlayTrack)][2]}></img>
+        <img className='avatar' src={listTrack[Number(listAlbumTrack.id > listTrack.length - 1 ? 1 : numberPlayTrack)][2]}></img>
         <div className='textInformation'>
-          <div className='musicName'>{massTrack[Number(numberPlayTrack)][3]}</div>
-          <div className='avtorNameMusic'  style={{ opacity: `${opacityAvtorNameMusic}`}}>{massTrack[Number(numberPlayTrack)][4]}</div>
+          <div className='musicName'>{listTrack[Number(listAlbumTrack.id > listTrack.length - 1 ? 1 : numberPlayTrack)][3]}</div>
+          <div className='avtorNameMusic'  style={{ opacity: `${opacityAvtorNameMusic}`}}>{listTrack[Number(listAlbumTrack.id > listTrack.length - 1 ? 1 : numberPlayTrack)][4]}</div>
         </div>
       </div>
       <div className='control'>
@@ -148,7 +155,7 @@ export default function ControllTrack(props) {
         </div>
         <audio
           ref={audioRef} 
-          src={massTrack[Number(numberPlayTrack)][1]} 
+          src={listTrack[Number(listAlbumTrack.id > listTrack.length - 1 ? 1 : numberPlayTrack)][1]} 
           onLoadedData={(e) => {setDuration(e.currentTarget.duration.toFixed(2))}}
           onTimeUpdate={getCurrDuration}
           onEnded={nextTrack}

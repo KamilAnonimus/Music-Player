@@ -2,20 +2,19 @@ import { useState, useEffect } from "react";
 import SliderDown from "./SmallBottomSlider";
 
 export default function Classic(props) {
-    const massTrack = props.massTrack
-    const massAlbum = props.massAlbum
-    const massAlbumTrack0 = props.massAlbumTrack0
+    const listTrack = props.listTrack
+    const listAlbum = props.listAlbum
+    const listAlbumTrack0 = props.listAlbumTrack0
     const maxPositionSlider = -575
     const [VisibilityOfExtraTracks, setVisibilityOfExtraTracks] = useState(false)
 
-    localStorage.clear()
     useEffect(() => {
         let name = { nameButton: 'classic'}
         props.colorButtons(name.nameButton)
       }, []);
     return(
         <div className="genresDownSlider">
-            <SliderDown maxPositionSlider={maxPositionSlider} VisibilityOfExtraTracks={VisibilityOfExtraTracks} massTrackIndex={props.massTrack[3]} massTrack={massTrack} massAlbum={massAlbum} massAlbumTrack0={massAlbumTrack0}/>
+            <SliderDown page={props.nameButton} numberAlbum={4} maxPositionSlider={maxPositionSlider} VisibilityOfExtraTracks={VisibilityOfExtraTracks} listTrackIndex={props.listTrack[3]} listTrack={listTrack} listAlbum={listAlbum} listAlbumTrack0={listAlbumTrack0}/>
         </div>
     );
 }

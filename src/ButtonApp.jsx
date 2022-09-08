@@ -1,10 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import All from "./components/All";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Trending from "./components/Trending";
 import Featured from "./components/Featured";
 import NewReleases from "./components/NewReleases";
-import Genres from "./components/Classic";
+import Classic from "./components/Classic";
 import MostPlayed from "./components/MostPlayed";
 import Homepage from "./Homepage";
 import AlbumsPage from "./AlbumsPage";
@@ -104,8 +103,9 @@ import ClassicAlbumTrackOneyAudio from './components/Music albums/Classic/10-Vit
 import ClassicAlbumTrackSecretagentAudio from './components/Music albums/Classic/11-Philip_Glass-Secret_agent/11-Philip_Glass-Secret_agent.mp3';
 
 export default function ButtonApp() {
-  const massAlbum = []
-  massAlbum[1] = {
+
+  const listAlbum = []
+  listAlbum[1] = useMemo(() => ({
     id:1,
     imgAlbum:BandanAlbumImg,
     nameAlbum:"BANDANA",
@@ -113,8 +113,8 @@ export default function ButtonApp() {
     numberOfArtists:"2",
     numberOfTracks:"13",
     durationAlbum:"36mins"
-  }
-  const [massAlbumTrack0] = useState([
+  }), [])
+  const [listAlbumTrack0] = useState([
     {id:1, imgTrack:BandanAlbumTrackImg1, name:"99 Problems", durationTrack:"2:39", artist:"Big Baby Tape", album:"Bandana"},
     {id:2, imgTrack:BandanAlbumTrackImg2, name:"Andrew Story", durationTrack:"3:12", artist:"Big Baby Tape", album:"Bandana"},
     {id:3, imgTrack:BandanAlbumTrackImg3, name:"Bandana", durationTrack:"2:31", artist:"Montana", album:"Bandana"},
@@ -130,7 +130,7 @@ export default function ButtonApp() {
     {id:13, imgTrack:BandanAlbumTrackImg13, name:"So Icy Nihao", durationTrack:"2:33", artist:"Big Baby & TapeWaves B", album:"Bandana"}
   ])
 
-  massAlbum[2] = {
+  listAlbum[2] = useMemo(() => ({
     id:2,
     imgAlbum:MillionDollarBusinessAlbumImg,
     nameAlbum:"MILLION DOLLAR",
@@ -138,8 +138,8 @@ export default function ButtonApp() {
     numberOfArtists:"1",
     numberOfTracks:"13",
     durationAlbum:"28mins"
-  }
-  const [massAlbumTrack1] = useState([
+  }), [])
+  const [listAlbumTrack1] = useState([
     {id:1, imgTrack:MillionDollarBusinessAlbumTrackImg1, name:"Aristocrat", durationTrack:"2:06", artist:"Алишер Моргенштерн & Александр Марков", album:"Million Dollar"},
     {id:2, imgTrack:MillionDollarBusinessAlbumTrackImg2, name:"Dinero", durationTrack:"2:38", artist:"Алишер Моргенштерн & Руслан Валеев", album:"Million Dollar"},
     {id:3, imgTrack:MillionDollarBusinessAlbumTrackImg3, name:"GTA", durationTrack:"2:07", artist:"Алишер Моргенштерн & Руслан Валеев", album:"Million Dollar"},
@@ -155,15 +155,15 @@ export default function ButtonApp() {
     {id:13, imgTrack:MillionDollarBusinessAlbumTrackImg13, name:"Я на таблах", durationTrack:"2:26", artist:"Алишер Моргенштерн & Александр Запорожец", album:"Million Dollar"}
   ])
 
-  massAlbum[3] = {
+  listAlbum[3] = useMemo(() => ({
     imgAlbum:MiyaGiAndyPandaAlbumImg,
     nameAlbum:"YAMAKASI",
     nameArtist:"MiyaGi & Andy Panda",
     numberOfArtists:"2",
     numberOfTracks:"9",
     durationAlbum:"30mins"
-  }
-  const [massAlbumTrack2] = useState([
+  }), [])
+  const [listAlbumTrack2] = useState([
     {id:1, imgTrack:MiyaGiAndyPandaAlbumTrackImg1, name:"Medicine", durationTrack:"3:07", artist:"MiyaGi & Andy Panda", album:"Yamakasi"},
     {id:2, imgTrack:MiyaGiAndyPandaAlbumTrackImg2, name:"Minor", durationTrack:"2:55", artist:"MiyaGi & Andy Panda", album:"Yamakasi"},
     {id:3, imgTrack:MiyaGiAndyPandaAlbumTrackImg3, name:"Tantra", durationTrack:"4:15", artist:"MiyaGi & Andy Panda", album:"Yamakasi"},
@@ -175,15 +175,15 @@ export default function ButtonApp() {
     {id:9, imgTrack:MiyaGiAndyPandaAlbumTrackImg9, name:"Utopia", durationTrack:"3:29", artist:"MiyaGi & Andy Panda", album:"Yamakasi"}
   ])
 
-  massAlbum[4] = {
+  listAlbum[4] = useMemo(() => ({
     imgAlbum:ClassicAlbumImg,
     nameAlbum:"Classic",
     nameArtist:"-",
     numberOfArtists:"-",
     numberOfTracks:"10",
     durationAlbum:"~30mins"
-  }
-  const [massAlbumTrack3] = useState([
+  }), [])
+  const [listAlbumTrack3] = useState([
     {id:1, imgTrack:ClassicAlbumTrackImg1, name:"Mihail_Oginskiy-Polonez", durationTrack:"2:36", artist:"Polonez", album:"Yamakasi"},
     {id:2, imgTrack:ClassicAlbumTrackImg2, name:"Nino_Rota", durationTrack:"2:08", artist:"-", album:"Classic"},
     {id:3, imgTrack:ClassicAlbumTrackImg3, name:"Wagener-Sommernachtstraum", durationTrack:"3:10", artist:"Hans_Gunter", album:"Classic"},
@@ -196,7 +196,7 @@ export default function ButtonApp() {
     {id:10, imgTrack:ClassicAlbumTrackImg10, name:"Secret_agent", durationTrack:"5:17", artist:"Philip_Glass", album:"Classic"}
   ])
 
-  const massTrack = [
+  const listTrack =  useMemo(() => ([
     [
       [0, BandanAlbumTrackProblemsAudio, BandanAlbumTrackImg1, "99 Problems", "Big Baby Tape"],
       [1, BandanAlbumTrackProblemsAudio, BandanAlbumTrackImg1, "99 Problems", "Big Baby Tape"],
@@ -257,18 +257,18 @@ export default function ButtonApp() {
     [
       [0, BandanAlbumTrackErrbodySleepingAudio, BandanAlbumTrackImg8 ,"Errbody Sleepin", "-"],
       [1, BandanAlbumTrackErrbodySleepingAudio, BandanAlbumTrackImg8 ,"Errbody Sleepin", "-"],
-      [3, MiyaGiAndyPandaAlbumTrackМалоНамAudio, MiyaGiAndyPandaAlbumTrackImg6, "Малонам", "MiyaGi & Andy Panda"],
-      [4, MiyaGiAndyPandaAlbumTrackПсихопатияAudio, MiyaGiAndyPandaAlbumTrackImg7, "Психопатия", "MiyaGi & Andy Panda"],
-      [5, ClassicAlbumTrackSecretagentAudio, ClassicAlbumTrackImg10, "Secret_agent", "Philip_Glass"],
-      [6, MillionDollarBusinessAlbumЯНаТаблахAudio, MillionDollarBusinessAlbumTrackImg13, "Я на таблах", "Алишер Моргенштерн & Александр Запорожец"],
-      [7, ClassicAlbumTrackNinoRotaAudio, ClassicAlbumTrackImg2, "Nino_Rota", "-"],
-      [8, ClassicAlbumTrackWagenerSommernachtstraumAudio, ClassicAlbumTrackImg3, "Wagener-Sommernachtstraum", "Hans_Gunter"],
-      [9, BandanAlbumTrackAndrewStoryAudio, BandanAlbumTrackImg2 ,"Andrew Story", "Big Baby Tape"],
-      [10, BandanAlbumTrackBandanaAudio, BandanAlbumTrackImg3 ,"Bandana", "Montana"],
-      [11, MillionDollarBusinessAlbumGTAAudio, MillionDollarBusinessAlbumTrackImg3, "GTA", "Алишер Моргенштерн & Руслан Валеев"],
-      [12, ClassicAlbumTrackMihail_OginskiyPolonezAudio, ClassicAlbumTrackImg1, "Mihail_Oginskiy-Polonez", "Polonez"]
+      [2, MiyaGiAndyPandaAlbumTrackМалоНамAudio, MiyaGiAndyPandaAlbumTrackImg6, "Малонам", "MiyaGi & Andy Panda"],
+      [3, MiyaGiAndyPandaAlbumTrackПсихопатияAudio, MiyaGiAndyPandaAlbumTrackImg7, "Психопатия", "MiyaGi & Andy Panda"],
+      [4, ClassicAlbumTrackSecretagentAudio, ClassicAlbumTrackImg10, "Secret_agent", "Philip_Glass"],
+      [5, MillionDollarBusinessAlbumЯНаТаблахAudio, MillionDollarBusinessAlbumTrackImg13, "Я на таблах", "Алишер Моргенштерн & Александр Запорожец"],
+      [6, ClassicAlbumTrackNinoRotaAudio, ClassicAlbumTrackImg2, "Nino_Rota", "-"],
+      [7, ClassicAlbumTrackWagenerSommernachtstraumAudio, ClassicAlbumTrackImg3, "Wagener-Sommernachtstraum", "Hans_Gunter"],
+      [8, BandanAlbumTrackAndrewStoryAudio, BandanAlbumTrackImg2 ,"Andrew Story", "Big Baby Tape"],
+      [9, BandanAlbumTrackBandanaAudio, BandanAlbumTrackImg3 ,"Bandana", "Montana"],
+      [10, MillionDollarBusinessAlbumGTAAudio, MillionDollarBusinessAlbumTrackImg3, "GTA", "Алишер Моргенштерн & Руслан Валеев"],
+      [11, ClassicAlbumTrackMihail_OginskiyPolonezAudio, ClassicAlbumTrackImg1, "Mihail_Oginskiy-Polonez", "Polonez"]
     ]
-  ]
+  ]), [])
 
   const [State, setState] = useState()
   function colorButtons(name) {
@@ -277,20 +277,19 @@ export default function ButtonApp() {
   return (
     <Routes>
         <Route path="/" element={<Homepage nameButton={State}/>} >
-          <Route index element={<All colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0} massAlbumTrack1={massAlbumTrack1} massAlbumTrack2={massAlbumTrack2} massAlbumTrack3={massAlbumTrack3}/>} />
-          <Route path="/trending" element={<Trending colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0}/>} />
-          <Route path="/featured" element={<Featured colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0}/>} />
-          <Route path="/newreleases" element={<NewReleases colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0}/>} />
-          <Route path="/classic" element={<Genres colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0}/>}/>
-          <Route path="/mostPlayed" element={<MostPlayed  colorButtons={colorButtons} massTrack={massTrack} massAlbumTrack0={massAlbumTrack0}/>} />
+          <Route index element={<Trending nameButton={State} colorButtons={colorButtons} listTrack={listTrack} listAlbumTrack0={listAlbumTrack0}/>} />
+          <Route path="/featured" element={<Featured nameButton={State} colorButtons={colorButtons} listTrack={listTrack} listAlbumTrack0={listAlbumTrack0}/>} />
+          <Route path="/newreleases" element={<NewReleases nameButton={State} colorButtons={colorButtons} listTrack={listTrack} listAlbumTrack0={listAlbumTrack0}/>} />
+          <Route path="/classic" element={<Classic nameButton={State} colorButtons={colorButtons} listTrack={listTrack} listAlbumTrack0={listAlbumTrack0}/>}/>
+          <Route path="/mostPlayed" element={<MostPlayed nameButton={State} colorButtons={colorButtons} listTrack={listTrack} listAlbumTrack0={listAlbumTrack0}/>} />
         </Route>
       <Route>              
-        <Route index element={<All />}></Route>
-        <Route path="/albumsPage" element={<AlbumsPage/>}></Route>
-        <Route path="/bandana" element={<AlbumsPage massAlbum={massAlbum[1]} massAlbumTrack={massAlbumTrack0} massTrack={massTrack[0]}/>}></Route>
-        <Route path="/millionDollar" element={<AlbumsPage massAlbum={massAlbum[2]} massAlbumTrack={massAlbumTrack1} massTrack={massTrack[1]}/>}></Route>
-        <Route path="/yamakasi" element={<AlbumsPage massAlbum={massAlbum[3]} massAlbumTrack={massAlbumTrack2} massTrack={massTrack[2]}/>}></Route>
-        <Route path="/classicAlbum" element={<AlbumsPage massAlbum={massAlbum[4]} massAlbumTrack={massAlbumTrack3} massTrack={massTrack[3]}/>}></Route>
+        <Route index element={<Trending />}></Route> 
+        <Route path="/albumsPage" element={<AlbumsPage page={State}/>}></Route>
+        <Route path="/bandana" element={<AlbumsPage listAlbum={listAlbum[1]} listAlbumTrack={listAlbumTrack0} listTrack={listTrack[0]}/>}></Route>
+        <Route path="/millionDollar" element={<AlbumsPage listAlbum={listAlbum[2]} listAlbumTrack={listAlbumTrack1} listTrack={listTrack[1]}/>}></Route>
+        <Route path="/yamakasi" element={<AlbumsPage listAlbum={listAlbum[3]} listAlbumTrack={listAlbumTrack2} listTrack={listTrack[2]}/>}></Route>
+        <Route path="/classicAlbum" element={<AlbumsPage listAlbum={listAlbum[4]} listAlbumTrack={listAlbumTrack3} listTrack={listTrack[3]}/>}></Route>
       </Route>
     </Routes>
   );
