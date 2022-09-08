@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Music-Player/static/css/main.83a75879.css",
-    "main.js": "/Music-Player/static/js/main.8f07b08e.js",
+    "main.js": "/Music-Player/static/js/main.d9951849.js",
     "static/media/MiyaGi & Andy Panda - Yamakasi.mp3": "/Music-Player/static/media/MiyaGi & Andy Panda - Yamakasi.89756e2f6c2ba10bd625.mp3",
     "static/media/MiyaGi & Andy Panda - Tantra.mp3": "/Music-Player/static/media/MiyaGi & Andy Panda - Tantra.57e990b91a412297af7b.mp3",
     "static/media/11-Philip_Glass-Secret_agent.mp3": "/Music-Player/static/media/11-Philip_Glass-Secret_agent.5ae722f8eea7feeb0d78.mp3",
@@ -74,10 +74,10 @@
     "static/media/Big-Baby-Tape-kizaru-Errbody-Sleeping-Lyrics-600x380.webp": "/Music-Player/static/media/Big-Baby-Tape-kizaru-Errbody-Sleeping-Lyrics-600x380.1ff0ac4cfd3a08e3d543.webp",
     "index.html": "/Music-Player/index.html",
     "main.83a75879.css.map": "/Music-Player/static/css/main.83a75879.css.map",
-    "main.8f07b08e.js.map": "/Music-Player/static/js/main.8f07b08e.js.map"
+    "main.d9951849.js.map": "/Music-Player/static/js/main.d9951849.js.map"
   },
   "entrypoints": [
     "static/css/main.83a75879.css",
-    "static/js/main.8f07b08e.js"
+    "static/js/main.d9951849.js"
   ]
 }
